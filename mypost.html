@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Posts - Porsche Marketplace</title>
+  <link rel="stylesheet" href="css/market.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+  <div class="header">
+    <div onclick="openNav1()" class="menu">
+        <i class="fas fa-bars"></i> Menu
+    </div>
+    <div class="logo" onclick="location.href='index.html'">
+        <img src="/image/logio23.png" alt="Porsche Logo">
+    </div>
+    <div class="users">
+    <button class="user-button">
+      <img id="userAvatar" src="./image/www.porsche.com-12.png" alt="User Icon">
+    </button>
+        <div class="user-dropdown">
+            <a href="#" id="dropdown-item-1"></a>
+            <a href="#" id="dropdown-item-2"></a>
+        </div>
+    </div>
+</div>
+<div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a href="market.html" id="nav-market">Market</a>
+    <a href="sell.html" id="nav-sell">Sell</a>
+    <a href="mypost.html" id="nav-mypost">My Posts</a>
+</div>
+  
+  <div class="main-section">
+    <div class="main-listing">
+      <div class="results-header">
+        <h2>My Car Listings</h2>
+        <a href="sell.html" class="btn-primary">Post New Car</a>
+      </div>
+      <div id="myPosts"></div>
+    </div>
+  </div>
+
+  <script type="module" src="./javascript/firebase-config.js"></script>
+  <script type="module" src="./javascript/auth.js"></script>
+  <script type="module" src="./javascript/mypost.js"></script>
+  <script src="./javascript/ps.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const currentPage = window.location.pathname.split("/").pop();
+      if (currentPage === "mypost.html") {
+        document.getElementById("nav-mypost").classList.add("active-page");
+      }
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,617 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Porsche Finder Clone (Section) - Responsive</title>
+    <link rel="preload" href="https://ext.same-assets.com/2503352466/3705982961.woff2" as="font" crossorigin>
+    <link rel="preload" href="https://ext.same-assets.com/2503352466/3488093016.woff2" as="font" crossorigin>
+    <style>
+        @font-face {
+            font-family: 'PorscheNext';
+            font-style: normal;
+            font-weight: 400;
+            src: url('https://ext.same-assets.com/2503352466/3705982961.woff2') format('woff2');
+        }
+
+        @font-face {
+            font-family: 'PorscheNext';
+            font-style: normal;
+            font-weight: 700;
+            src: url('https://ext.same-assets.com/2503352466/3488093016.woff2') format('woff2');
+        }
+        html,
+        body {
+            background: #f3f3f5;
+            margin: 0;
+            padding: 0;
+            font-family: 'PorscheNext', Arial, sans-serif;
+            color: #191919;
+            line-height: 1.5;
+        }
+
+        .main-section {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            max-width: 1500px;
+            margin: 20px auto 0 auto;
+            padding: 0 16px;
+            align-items: stretch;
+        }
+
+        .filter-toggle {
+            display: block;
+            width: 100%;
+            padding: 16px;
+            background: #191919;
+            color: #fff;
+            border: none;
+            border-radius: 12px;
+            font-family: 'PorscheNext', Arial, sans-serif;
+            font-size: 16px;
+            font-weight: 700;
+            cursor: pointer;
+            margin-bottom: 16px;
+            transition: background 0.2s;
+        }
+
+        .filter-toggle:hover {
+            background: #333;
+        }
+
+        .filter-toggle:focus {
+            outline: 2px solid #666;
+            outline-offset: 2px;
+        }
+
+        .filters {
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+            padding: 24px 20px;
+            font-size: 16px;
+            width: 100%;
+            order: 2;
+        }
+
+        .filters.hidden {
+            display: none;
+        }
+
+        .filters h2 {
+            font-size: 20px;
+            font-weight: 700;
+            margin: 0 0 20px 0;
+        }
+
+        .filter-group {
+            margin-bottom: 24px;
+        }
+
+        .filter-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 400;
+            font-size: 15px;
+        }
+
+        .filter-group input[type="checkbox"] {
+            accent-color: #191919;
+            margin-right: 8px;
+            width: 18px;
+            height: 18px;
+        }
+
+        .filter-group select,
+        .filter-group input[type="text"] {
+            width: 100%;
+            padding: 12px 14px;
+            border: 1px solid #d1d1d1;
+            border-radius: 6px;
+            font-size: 15px;
+            margin-top: 6px;
+            margin-bottom: 8px;
+            background: #fafafa;
+            font-family: 'PorscheNext', Arial, sans-serif;
+            box-sizing: border-box;
+        }
+
+        .filter-group select:focus,
+        .filter-group input[type="text"]:focus {
+            outline: 2px solid #191919;
+            outline-offset: 1px;
+            border-color: #191919;
+        }
+
+        .divider {
+            border: none;
+            border-top: 1px solid #e5e5e5;
+            margin: 20px 0;
+        }
+
+        .main-listing {
+            overflow: hidden;
+            flex: 1;
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+            order: 1;
+        }
+
+        .car-card {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            align-items: stretch;
+            padding: 20px;
+        }
+
+        /* Car Gallery */
+        .car-gallery {
+            overflow: hidden;
+            width: 100%;
+            flex-shrink: 0;
+        }
+
+        .car-gallery img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 1px 4px rgba(0, 0, 0, 0.07);
+        }
+
+        .gallery-thumbs {
+            margin-top: 4px;
+            gap: 4px;
+            display: flex;
+        }
+
+        .gallery-thumbs img {
+            width: calc(33.333% - 3px);
+            height: 80px;
+            object-fit: cover;
+            cursor: pointer;
+            border-radius: 4px;
+            transition: opacity 0.2s;
+        }
+
+        .gallery-thumbs img:hover {
+            opacity: 0.8;
+        }
+
+        /* Car Info */
+        .car-info {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .car-title {
+            font-size: 22px;
+            font-weight: 700;
+            margin-bottom: 8px;
+            line-height: 1.3;
+        }
+
+        .car-details {
+            font-size: 15px;
+            color: #555;
+            margin-bottom: 16px;
+            line-height: 1.4;
+        }
+
+        .car-price {
+            font-size: 20px;
+            font-weight: 700;
+            color: #191919;
+            margin-bottom: 16px;
+        }
+
+        .car-attributes {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            font-size: 14px;
+            margin-bottom: 16px;
+        }
+
+        .car-attributes span {
+            background: #f3f3f5;
+            border-radius: 4px;
+            padding: 6px 12px;
+            color: #191919;
+            display: inline-block;
+            width: fit-content;
+        }
+
+        /* Car Actions */
+        .car-actions {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin-top: 16px;
+        }
+
+        .car-actions button {
+            font-family: 'PorscheNext', Arial, sans-serif;
+            font-size: 16px;
+            padding: 14px 28px;
+            border-radius: 6px;
+            border: none;
+            cursor: pointer;
+            font-weight: 700;
+            transition: background 0.2s;
+            width: 100%;
+            min-height: 48px; /* Touch-friendly */
+        }
+
+        .car-actions .primary {
+            background: #191919;
+            color: #fff;
+        }
+
+        .car-actions .primary:hover {
+            background: #333;
+        }
+
+        .car-actions .primary:focus {
+            outline: 2px solid #666;
+            outline-offset: 2px;
+        }
+
+        .car-actions .secondary {
+            background: #fff;
+            color: #191919;
+            border: 1.5px solid #191919;
+        }
+
+        .car-actions .secondary:hover {
+            background: #f3f3f5;
+        }
+
+        .car-actions .secondary:focus {
+            outline: 2px solid #191919;
+            outline-offset: 2px;
+        }
+
+        /* Tablet Styles */
+        @media (min-width: 768px) {
+            .main-section {
+                margin: 40px auto 0 auto;
+                padding: 0 24px;
+                gap: 24px;
+            }
+
+            .filter-toggle {
+                display: none;
+            }
+
+            .filters {
+                display: block !important;
+                padding: 28px 22px;
+            }
+
+            .filters h2 {
+                font-size: 22px;
+                margin-bottom: 24px;
+            }
+
+            .car-card {
+                padding: 28px;
+                gap: 24px;
+            }
+
+            .car-title {
+                font-size: 24px;
+            }
+
+            .car-details {
+                font-size: 16px;
+            }
+
+            .car-price {
+                font-size: 22px;
+            }
+
+            .car-attributes {
+                flex-direction: row;
+                flex-wrap: wrap;
+                gap: 12px;
+                font-size: 15px;
+            }
+
+            .car-actions {
+                flex-direction: row;
+                gap: 16px;
+            }
+
+            .car-actions button {
+                width: auto;
+                flex: 1;
+            }
+
+            .gallery-thumbs img {
+                height: 100px;
+            }
+        }
+
+        /* Desktop Styles */
+        @media (min-width: 1024px) {
+            .main-section {
+                flex-direction: row;
+                gap: 36px;
+                margin: 60px auto 0 auto;
+                align-items: flex-start;
+            }
+
+            .filters {
+                width: 320px;
+                min-width: 280px;
+                padding: 32px 24px;
+                order: 1;
+            }
+
+            .main-listing {
+                min-width: 400px;
+                order: 2;
+            }
+
+            .car-card {
+                flex-direction: row;
+                gap: 32px;
+                align-items: flex-start;
+                padding: 32px;
+            }
+
+            .car-gallery {
+                width: 500px;
+                flex-shrink: 0;
+            }
+
+            .car-title {
+                font-size: 26px;
+            }
+
+            .car-attributes {
+                gap: 24px;
+            }
+
+            .car-actions {
+                margin-top: 18px;
+            }
+
+            .gallery-thumbs img {
+                height: 120px;
+            }
+        }
+
+        /* Large Desktop Styles */
+        @media (min-width: 1200px) {
+            .car-gallery {
+                width: 600px;
+            }
+
+            .gallery-thumbs img {
+                height: 140px;
+            }
+        }
+
+        /* High DPI Displays */
+        @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+            .car-gallery img,
+            .gallery-thumbs img {
+                image-rendering: -webkit-optimize-contrast;
+                image-rendering: crisp-edges;
+            }
+        }
+
+        /* Print Styles */
+        @media print {
+            .filter-toggle,
+            .filters {
+                display: none;
+            }
+
+            .main-section {
+                flex-direction: column;
+                margin: 0;
+                padding: 0;
+                gap: 20px;
+            }
+
+            .car-actions {
+                display: none;
+            }
+
+            .main-listing {
+                box-shadow: none;
+                border: 1px solid #ccc;
+            }
+        }
+
+        /* Reduced Motion */
+        @media (prefers-reduced-motion: reduce) {
+            .car-actions button,
+            .gallery-thumbs img,
+            .filter-toggle {
+                transition: none;
+            }
+        }
+
+        /* Dark Mode Support */
+        @media (prefers-color-scheme: dark) {
+            html,
+            body {
+                background: #1a1a1a;
+                color: #e0e0e0;
+            }
+
+            .filters,
+            .main-listing {
+                background: #2a2a2a;
+                color: #e0e0e0;
+            }
+
+            .filter-group select,
+            .filter-group input[type="text"] {
+                background: #3a3a3a;
+                border-color: #555;
+                color: #e0e0e0;
+            }
+
+            .car-attributes span {
+                background: #3a3a3a;
+                color: #e0e0e0;
+            }
+
+            .car-actions .secondary {
+                background: #2a2a2a;
+                color: #e0e0e0;
+                border-color: #e0e0e0;
+            }
+
+            .car-actions .secondary:hover {
+                background: #3a3a3a;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main-section">
+        <aside class="filters">
+            <button class="filter-toggle" onclick="toggleFilters()">Filter anzeigen/ausblenden</button>
+            <div class="filter-content">
+                <h2>Filter</h2>
+                <div class="filter-group">
+                    <label>Model</label>
+                    <select>
+                        <option>Porsche Cayenne</option>
+                        <option>Porsche 911</option>
+                        <option>Porsche Taycan</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label>Karosserieform</label>
+                    <select>
+                        <option>Coupé</option>
+                        <option>SUV</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label>Preis bis</label>
+                    <input type="text" placeholder="z.B. 120.000 €">
+                </div>
+                <div class="filter-group">
+                    <label><input type="checkbox"> Nur Neuwagen</label>
+                    <label><input type="checkbox"> Nur Gebrauchtwagen</label>
+                </div>
+                <hr class="divider">
+                <div class="filter-group">
+                    <label>Farbe</label>
+                    <select>
+                        <option>Schwarz</option>
+                        <option>Weiß</option>
+                        <option>Rot</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label><input type="checkbox"> Nur mit Garantie</label>
+                </div>
+            </div>
+        </aside>
+
+        <main class="main-listing">
+            <div class="car-card">
+                <div class="car-gallery">
+                    <img src="https://images.finder.porsche.com/8e0f9d04-b1a5-4dbd-845a-438f7d225235/960.avif"
+                        alt="Porsche Cayenne GTS Coupé" loading="lazy">
+                    <div class="gallery-thumbs">
+                        <img src="https://images.finder.porsche.com/102a2354-2d11-4c4e-8a17-79b288aac269/640.avif"
+                            alt="Thumb 1" loading="lazy" onclick="changeMainImage(this.src)">
+                        <img src="https://images.finder.porsche.com/47208fb8-398e-4cd2-8ab7-dd6d4f857d86/640.avif"
+                            alt="Thumb 2" loading="lazy" onclick="changeMainImage(this.src)">
+                        <img src="https://images.finder.porsche.com/47208fb8-398e-4cd2-8ab7-dd6d4f857d86/640.avif"
+                            alt="Thumb 3" loading="lazy" onclick="changeMainImage(this.src)">
+                    </div>
+                </div>
+                <div class="car-info">
+                    <div>
+                        <div class="car-title">Porsche Cayenne GTS Coupé</div>
+                        <div class="car-details">Neuwagen · 2024 · 338 kW (460 PS) · Automatik</div>
+                        <div class="car-price">129.900 €</div>
+                        <div class="car-attributes">
+                            <span>Farbe: Schwarz</span>
+                            <span>Innen: Leder, Rot</span>
+                            <span>Standort: Stuttgart</span>
+                        </div>
+                    </div>
+                    <div class="car-actions">
+                        <button class="primary">Fahrzeug ansehen</button>
+                        <button class="secondary">Merken</button>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        // Toggle filters on mobile
+        function toggleFilters() {
+            const filterContent = document.querySelector('.filter-content');
+            const isHidden = filterContent.style.display === 'none';
+            filterContent.style.display = isHidden ? 'block' : 'none';
+            
+            // Update button text
+            const button = document.querySelector('.filter-toggle');
+            button.textContent = isHidden ? 'Filter ausblenden' : 'Filter anzeigen';
+        }
+
+        // Change main gallery image
+        function changeMainImage(src) {
+            const mainImage = document.querySelector('.car-gallery > img');
+            mainImage.src = src;
+        }
+
+        // Initialize mobile filter state
+        function initializeMobileFilters() {
+            if (window.innerWidth < 768) {
+                const filterContent = document.querySelector('.filter-content');
+                filterContent.style.display = 'none';
+            }
+        }
+
+        // Handle window resize
+        window.addEventListener('resize', function() {
+            const filterContent = document.querySelector('.filter-content');
+            if (window.innerWidth >= 768) {
+                filterContent.style.display = 'block';
+                document.querySelector('.filter-toggle').textContent = 'Filter anzeigen/ausblenden';
+            } else {
+                initializeMobileFilters();
+            }
+        });
+
+        // Initialize on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            initializeMobileFilters();
+        });
+
+        // Add keyboard navigation for gallery
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'ArrowLeft' || e.key === 'ArrowRight') {
+                const thumbs = document.querySelectorAll('.gallery-thumbs img');
+                const currentMain = document.querySelector('.car-gallery > img').src;
+                let currentIndex = Array.from(thumbs).findIndex(thumb => thumb.src === currentMain);
+                
+                if (e.key === 'ArrowLeft' && currentIndex > 0) {
+                    changeMainImage(thumbs[currentIndex - 1].src);
+                } else if (e.key === 'ArrowRight' && currentIndex < thumbs.length - 1) {
+                    changeMainImage(thumbs[currentIndex + 1].src);
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>

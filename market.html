@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Porsche Marketplace</title>
+    <link rel="stylesheet" href="css/market.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="preload" href="https://ext.same-assets.com/2503352466/3705982961.woff2" as="font" crossorigin>
+    <link rel="preload" href="https://ext.same-assets.com/2503352466/3488093016.woff2" as="font" crossorigin>
+</head>
+
+<body>
+    <div class="header">
+        <div onclick="openNav1()" class="menu">
+            <i class="fas fa-bars"></i> Menu
+        </div>
+        <div class="logo" onclick="location.href='index.html'">
+            <img src="/image/logio23.png" alt="Porsche Logo">
+        </div>
+        <div class="users">
+            <button class="user-button">
+                <img id="userAvatar" src="./image/www.porsche.com-12.png" alt="User Icon">
+            </button>
+            <div class="user-dropdown">
+                <a href="#" id="dropdown-item-1"></a>
+                <a href="#" id="dropdown-item-2"></a>
+            </div>
+        </div>
+    </div>
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="market.html" id="nav-market">Market</a>
+        <a href="sell.html" id="nav-sell">Sell</a>
+        <a href="mypost.html" id="nav-mypost">My Posts</a>
+    </div>
+    <div class="main-section">
+        <aside class="filters">
+            <button class="filter-toggle" onclick="toggleFilters()">Show/Hide Filters</button>
+            <div class="filter-content">
+                <h2>Filter</h2>
+
+                <div class="filter-group">
+                    <label>Filter by Year</label>
+                    <input type="number" id="filterYear" placeholder="Ex: 2020">
+                </div>
+
+                <div class="filter-group">
+                    <label>Maximum Price</label>
+                    <input type="number" id="filterPrice" placeholder="Ex: 5000000">
+                </div>
+
+                <div class="filter-group">
+                    <label>Model:</label>
+                    <select id="filterModel">
+                        <option value="">All</option>
+                        <option value="911">Porsche 911</option>
+                        <option value="Cayenne">Porsche Cayenne</option>
+                        <option value="Macan">Porsche Macan</option>
+                        <option value="Taycan">Porsche Taycan</option>
+                        <option value="Panamera">Porsche Panamera</option>
+                        <option value="718">Porsche 718</option>
+                    </select>
+                </div>
+
+                <hr class="divider">
+
+                <div class="filter-group">
+                    <label><input type="checkbox" id="filterAvailable"> Available Cars only</label>
+                    <label><input type="checkbox" id="filterBookmarked"> Bookmarked</label>
+                </div>
+
+                <div class="filter-group">
+                    <button id="applyFilter" class="primary" style="width: 100%; margin-top: 10px;">Apply Filter</button>
+                    <button id="clearFilter" class="secondary" style="width: 100%; margin-top: 8px;">Remove Filter</button>
+                </div>
+            </div>
+        </aside>
+
+        <main class="main-listing">
+            <div class="results-header"
+                style="padding: 20px 20px 0 20px; border-bottom: 1px solid #e5e5e5; margin-bottom: 0;">
+                <h1 style="margin: 0; font-size: 24px; font-weight: 700;">Porsche Car Listings</h1>
+                <div class="car-count" style="font-size: 16px; color: #666; margin-top: 8px;">
+                    <span id="carCount">0</span> cars available
+                </div>
+            </div>
+
+            <div id="marketList"></div>
+
+            <div id="emptyState" style="display: none; text-align: center; padding: 60px 20px; color: #666;">
+                <h3>No cars found</h3>
+                <p>Try adjusting your filters or add new cars to the system.</p>
+            </div>
+
+           
+        </main>
+    </div>
+
+    <script type="module" src="./javascript/firebase-config.js"></script>
+    <script type="module" src="./javascript/auth.js"></script>
+    <script type="module" src="./javascript/firestoreService.js"></script>
+    <script type="module" src="./javascript/market.js"></script>
+    <script src="./javascript/ps.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const currentPage = window.location.pathname.split("/").pop();
+            if (currentPage === "market.html") {
+                document.getElementById("nav-market").classList.add("active-page");
+            }
+        });
+    </script>
+</body>
+
+</html>

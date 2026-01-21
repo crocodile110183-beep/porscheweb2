@@ -1,0 +1,73 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Porsche - Log in</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="css/login.css" type="text/css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="left-side">
+            <img alt="Blue Porsche car parked in front of a hotel building with a woman walking beside it, ocean and sky in background"
+                height="900" src="https://assets.identity.porsche.com/img/background.webp" width="1200" />
+        </div>
+        <div class="right-side">
+            <div class="component-container"> 
+                <div aria-label="Porsche logo" class="logo">
+                    <img src="https://assets.identity.porsche.com/img/logo.png" alt="">
+                </div>
+                <h2>
+                    Welcome! Log in with your
+                    <br />
+                    Email
+                </h2>
+                <p class="description">
+                    Please enter the e-mail address, you defined as your Porsche ID.
+                </p>
+                <form id="login">
+                    <input name="email" aria-label="Porsche ID" placeholder="E-mail ID*" required="" type="email" />
+                    <input name="password" aria-label="Porsche ID" placeholder="Password*" required="" type="password" />
+                    <button class="btn-black" type="submit">
+                        Login with password
+                    </button>
+                    <div aria-label="or separator" class="divider">
+                        or
+                    </div>
+                    <button id="googleSignIn" class="btn-white" type="button">
+                        Continue with Google
+                    </button>
+                    <button class="btn-white" onclick="window.location.href='signin.html'" type="button">
+                        Create Porsche Account
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <footer>
+        © 2025 Porsche Sales &amp; Marketplace GmbH.
+        <a href="#" tabindex="0">
+            Legal Notice.
+        </a>
+        <a href="#" tabindex="0">
+            Business and Human Rights.
+        </a>
+        <a href="#" tabindex="0">
+            Data Privacy.
+        </a>
+        <a href="#" tabindex="0">
+            Cookie Policy.
+        </a>
+        <a href="#" tabindex="0">
+            Additional privacy information.
+        </a>
+        <a href="#" tabindex="0">
+            Open Source Software Notice.
+        </a>
+    </footer>
+    <script type="module" src="./javascript/auth.js"></script>
+</body>
+
+</html>

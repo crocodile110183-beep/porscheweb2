@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Admin Moderation</title>
+    <link rel="stylesheet" href="./css/market.css">
+    <link rel="stylesheet" href="css/admin.css">
+
+</head>
+
+<body>
+    <h1>Moderation — Pending Listings</h1>
+    <div style="margin-bottom:12px;">
+        <small id="adminUidInfo">Signed-in UID: <span id="currentUid">(not signed in)</span></small>
+        <button id="copyUid" style="margin-left:8px; padding:4px 8px; font-size:12px;">Copy UID</button>
+    </div>
+    <div id="pendingList">Loading pending listings…</div>
+
+    <script type="module" src="./javascript/firebase-config.js"></script>
+    <script type="module" src="./javascript/auth.js"></script>
+    <script type="module" src="./javascript/firestoreService.js"></script>
+    <script type="module" src="./javascript/admin.js"></script>
+    <script>
+        (function(){
+            function setUidText(u){
+                const el = document.getElementById('currentUid');
+                if(!el) return;
+                el.textContent = u ? u.uid || u : '(not signed in)';
+            }
+            try{
+                import('./javascript/auth.js').then(mod=>{
+                    const cur = mod.getCurrentUser && typeof mod.getCurrentUser === 'function' ? mod.getCurrentUser() : null;
+                    setUidText(cur);
+                    if (mod.onAuthChanged) mod.onAuthChanged((u)=> setUidText(u));
+                }).catch(()=>{});
+            }catch(e){}
+
+            const copyBtn = document.getElementById('copyUid');
+            if(copyBtn) copyBtn.addEventListener('click', async ()=>{
+                const txt = document.getElementById('currentUid').textContent || '';
+                try{ await navigator.clipboard.writeText(txt); alert('UID copied: ' + txt); }catch(e){ prompt('Copy this UID', txt); }
+            });
+        })();
+    </script>
+</body>
+
+</html>

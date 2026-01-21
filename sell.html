@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sell Your Porsche - Porsche Marketplace</title>
+    <link rel="stylesheet" href="css/market.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+
+<body>
+    <div class="header">
+        <div onclick="openNav1()" class="menu">
+            <i class="fas fa-bars"></i> Menu
+        </div>
+        <div class="logo" onclick="location.href='index.html'">
+            <img src="/image/logio23.png" alt="Porsche Logo">
+        </div>
+        <div class="users">
+            <button class="user-button">
+                <img id="userAvatar" src="./image/www.porsche.com-12.png" alt="User Icon">
+            </button>
+            <div class="user-dropdown">
+                <a href="#" id="dropdown-item-1"></a>
+                <a href="#" id="dropdown-item-2"></a>
+            </div>
+        </div>
+    </div>
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="market.html" id="nav-market">Market</a>
+        <a href="sell.html" id="nav-sell">Sell</a>
+        <a href="mypost.html" id="nav-mypost">My Posts</a>
+    </div>
+
+    <div class="main-section">
+        <div class="filters">
+            <h2>Listing Guidelines</h2>
+            <ul class="guidelines">
+                <li>Provide accurate information</li>
+                <li>Upload high-quality photos</li>
+                <li>Set competitive pricing</li>
+                <li>Include detailed description</li>
+            </ul>
+        </div>
+
+        <div class="main-listing">
+            <h2>List Your Porsche for Sale</h2>
+            <form id="sellForm" class="sell-form">
+                <div class="filter-group">
+                    <label for="model">Model:</label>
+                    <select id="model" required>
+                        <option value="">Select Model</option>
+                        <option value="911">Porsche 911</option>
+                        <option value="Cayenne">Porsche Cayenne</option>
+                        <option value="Macan">Porsche Macan</option>
+                        <option value="Taycan">Porsche Taycan</option>
+                        <option value="Panamera">Porsche Panamera</option>
+                        <option value="718">Porsche 718</option>
+                    </select>
+                </div>
+
+                <div class="filter-group">
+                    <label for="year">Year:</label>
+                    <input type="number" id="year" min="1950" max="2024" required />
+                </div>
+
+                <div class="filter-group">
+                    <label for="mileage">Mileage (km):</label>
+                    <input type="number" id="mileage" min="0" required />
+                </div>
+
+                <div class="filter-group">
+                    <label for="condition">Condition:</label>
+                    <select id="condition" required>
+                        <option value="">Select Condition</option>
+                        <option value="New">New</option>
+                        <option value="Pre-Owned">Pre-Owned</option>
+                        <option value="Certified Pre-Owned">Certified Pre-Owned</option>
+                        <option value="Classic">Classic</option>
+                    </select>
+                </div>
+
+                <div class="filter-group">
+                    <label for="description">Description:</label>
+                    <textarea id="description" rows="4" placeholder="Describe your Porsche\\'s features, history, and condition..." required></textarea>
+                </div>
+
+                <div class="filter-group">
+                    <label for="price">Price ($):</label>
+                    <input type="number" id="price" min="0" required />
+                </div>
+
+                <div class="filter-group">
+                    <label for="phone">Phone Number:</label>
+                    <input type="tel" id="phone" required />
+                </div>
+
+                <div class="filter-group">
+                    <label>Photos (choose files):</label>
+                    <input type="file" id="img1" accept="image/*" required />
+                    <input type="file" id="img2" accept="image/*" />
+                    <input type="file" id="img3" accept="image/*" />
+                </div>
+
+                <div class="form-actions">
+                    <button type="button" class="secondary" onclick="window.history.back()">Cancel</button>
+                    <button type="submit" class="primary">List My Porsche</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script type="module" src="./javascript/firebase-config.js"></script>
+    <script type="module" src="./javascript/auth.js"></script>
+    <script type="module" src="./javascript/firestoreService.js"></script>
+    <script type="module" src="./javascript/sell.js"></script>
+    <script src="./javascript/ps.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const currentPage = window.location.pathname.split("/").pop();
+            if (currentPage === "sell.html") {
+                document.getElementById("nav-sell").classList.add("active-page");
+            }
+        });
+    </script>
+</body>
+
+</html>

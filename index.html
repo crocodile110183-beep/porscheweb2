@@ -1,0 +1,233 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Porsche</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css" type="text/css">
+</head>
+
+
+<body id="body">
+    <script src="./javascript/ps.js"></script>
+    <script src="./javascript/auth.js"></script>
+    <div onclick="closeNav()" id="mySidenav" class="sidenav">
+        <div onclick="Open718()" class="car-container">
+            <div class="car-title">
+                718
+            </div>
+            <img id="cimg" alt="Image of a 718 car model" height="300"
+                src="https://images-porsche.imgix.net/-/media/4D76222C0FFD456B9F8F93CC638725CD_269E9C4B98FF4C54B6DE2F8741B844F0_CM24N3CIX0006-01-718-cayman-s-side?w=2560&h=697&q=45&crop=faces%2Centropy%2Cedges&auto=format"
+                width="600" />
+            <div id="ft" class="fuel-type">
+                Gasoline
+            </div>
+        </div>
+        <div onclick="Open911()" class="car-container">
+            <div class="car-title">
+                911
+            </div>
+            <img id="cimg" alt="Image of a 911 car model" height="300"
+                src="https://images-porsche.imgix.net/-/media/243EAB8F810C4DE395A5DD4C0D154B9F_2FA3EAFE31044EE5B0485A499CEBD557_CZ26W03IX0010-911-carrera-s-side?w=2560&h=697&q=45&crop=faces%2Centropy%2Cedges&auto=format"
+                width="600" />
+            <div id="ft" class="fuel-type">
+                Gasoline
+            </div>
+        </div>
+        <div onclick="OpenTC()" class="car-container">
+            <div class="car-title">
+                Taycan
+            </div>
+            <img id="cimg" alt="Image of a Taycan car model" height="300"
+                src="https://images-porsche.imgix.net/-/media/92AF17A38D324AB788D0362DC53C8C52_4B915A284B3C4BEDB1E6EF0FEA2065A8_taycan-4-side?w=2560&h=697&q=45&crop=faces%2Centropy%2Cedges&auto=format"
+                width="600" />
+            <div id="ft" class="fuel-type">
+                Electric
+            </div>
+        </div>
+        <div onclick="OpenPNMR()" class="car-container">
+            <div class="car-title">
+                Panamera
+            </div>
+            <img id="cimg" alt="Image of a Panamera car model" height="300"
+                src="https://images-porsche.imgix.net/-/media/C7ADC76FD1A84CEAAE7024CF325F2F2D_2E34FF94FDAE4D36B91A523A1431136A_panamera-4-e-hybrid-model-intro?w=2560&h=697&q=45&crop=faces%2Centropy%2Cedges&auto=format"
+                width="600" />
+            <div id="ft" class="fuel-type">
+                Hybrid / Gasoline
+            </div>
+        </div>
+    </div>
+    <script src="./javascript/js.js"></script>
+    <div id="main">
+        <div class="container">
+            <div id="main2" class="header">
+                <div onclick="openNav()" onclick="openNav2()" class="menu animated animatedFadeInUp fadeInUp">
+                    <i class="fas fa-ars "></i> Menu
+                </div>
+                <div class="animated animatedFadeInUp fadeInUp logo">
+                    <img src="/image/logio23.png">
+                </div>
+                <div class="users">
+                    <button class="user-button">
+                            <img id="userAvatar" src="./image/www.porsche.com-12.png" alt="User Icon">
+                        </button>
+                    <div class="user-dropdown">
+
+                        <a href="#" id="dropdown-item-1"></a>
+                        <a href="#" id="dropdown-item-2"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="overlay"></div>
+            <div class="content animated animatedFadeInUp fadeInUp">
+                <h1>The one and</h1>
+                <h1>always.</h1>
+                <button onclick="Open911()" class="button animated animatedFadeInUp fadeInUp">Discover the 911</button>
+            </div>
+        </div>
+
+        <div class="section-part1">
+            <div onclick="location.href='market.html'" class="OpenMarket">
+                <div>
+                    <img src="https://porsche.imgix.net/-/media/816DF8954B674F75A17F335598CF36CF_CCA5284A0CAD4C98B29038916164BE9B_KW29---WW---Goodwood?h=2880&iar=0&w=900&ar=4%3A3&q=80&crop=faces%2Centropy%2Cedges&auto=format"
+                        alt="">
+                </div>
+                <div class="smoltext">
+                    <h2>Pre-owned Marketplace</h2>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+        <div class="section-part2" id="dark-entry">
+            <h1 class="models-title" id="color-entry">
+                Your Porsche journey starts now.
+            </h1>
+            <div class="part2container">
+                <div class="fuck1">
+                    <div onmouseenter="box1enter()" onmouseleave="box1leave()" id="card-1" class="model-card">
+                        <img src="https://a.storyblok.com/f/338913/1280x1024/f8ad827507/718-desktop_5-4.jpg/m/filters:format(webp):quality(100)"
+                            alt="718 model" />
+
+                        <div class="model-card-content-1">
+                            <h3>718</h3>
+                            <p>Gasoline</p>
+                        </div>
+
+                        <div class="model-card-content">
+                            <p class="model-words">The mid-engine sports car made for driving pleasure.</p>
+                            <p class="price">from VND 3,850,000,000</p>
+                            <div class="buttons">
+                                <a href="#">Discover the 718</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="fuck2">
+                    <div onmouseenter="box2enter()" onmouseleave="box2leave()" id="card-2" class="model-card">
+                        <img src="https://a.storyblok.com/f/338913/1280x1024/b7f3c2d593/911-desktop_5-4.jpg/m/filters:format(webp):quality(100)"
+                            alt="911 model" />
+
+                        <div class="model-card-content-1">
+                            <h3>911</h3>
+                            <p>Gasoline</p>
+                        </div>
+
+                        <div class="model-card-content">
+                            <p class="model-words">The iconic rear-engine sports car.</p>
+                            <p class="price">from VND 8,200,000,000</p>
+                            <div class="buttons">
+                                <a href="#">Discover the 911</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="part3container">
+                <div class="fuck3">
+                    <div onmouseenter="box3enter()" onmouseleave="box4leave()" id="card-3" class="model-card">
+                        <img src="https://porsche.imgix.net/-/media/4E574EBF988743EB8BB056A35BB4F1B9__Taycan-Desktop_5-4?h=1024&iar=0&w=1280&auto=format"
+                            alt="718 model" />
+
+                        <div class="model-card-content-1">
+                            <h3>Taycan</h3>
+                            <p>Electric</p>
+                        </div>
+
+                        <div class="model-card-content">
+                            <p class="model-words">The mid-engine sports car made for driving pleasure.</p>
+                            <p class="price">from VND 3,850,000,000</p>
+                            <div class="buttons">
+                                <a href="#">Discover the 718</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="fuck4">
+                    <div onmouseenter="box4enter()" onmouseleave="box4leave()" id="card-4" class="model-card">
+                        <img src="https://a.storyblok.com/f/338913/1280x1024/c06fa1b962/panamera-desktop_5-4.jpg/m/filters:format(webp):quality(100)"
+                            alt="911 model" />
+
+                        <div class="model-card-content-1">
+                            <h3>Panamera</h3>
+                            <p>Hybrid / Gasoline</p>
+                        </div>
+
+                        <div class="model-card-content">
+                            <p class="model-words">Luxury sedan with a high level comfort: 4 seats, 4 doors and a spacious interior.</p>
+                            <p class="price">from VND 8,000,000,000</p>
+                            <div class="buttons">
+                                <a href="#">Discover the Panamera</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    <script src="./javascript/ps.js"></script>
+    <script type="module" src="./javascript/auth.js"></script>
+    <script src="./javascript/intersectionobserver.js"></script>
+    <script type="module" src="./javascript/aiWidget.js"></script>
+</body>
+
+</html>
+
+</div>
+
+
+
+<footer>
+    © 2025 Porsche Sales &amp; Marketplace GmbH.
+    <a href="#" tabindex="0">
+        Legal Notice.
+    </a>
+    <a href="#" tabindex="0">
+        Business and Human Rights.
+    </a>
+    <a href="#" tabindex="0">
+        Data Privacy.
+    </a>
+    <a href="#" tabindex="0">
+        Cookie Policy.
+    </a>
+    <a href="#" tabindex="0">
+        Additional privacy information.
+    </a>
+    <a href="#" tabindex="0">
+        Open Source Software Notice.
+    </a>
+    </br>
+    <img src="image/www.porsche.com-11.png" alt="">
+</footer>
+
+</html>
