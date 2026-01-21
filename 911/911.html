@@ -1,0 +1,368 @@
+<html>
+
+<head>
+    <title>Porsche 911</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="911.css" type="text/css">
+</head>
+
+<body>
+    <script src="/javascript/cars.js"></script>
+    <script src="/javascript/ps.js"></script>
+
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <div onclick="Open718()" class="car-container">
+            <div class="car-title">
+                718
+            </div>
+            <img alt="Image of a 718 car model" height="300"
+                src="https://images-porsche.imgix.net/-/media/4D76222C0FFD456B9F8F93CC638725CD_269E9C4B98FF4C54B6DE2F8741B844F0_CM24N3CIX0006-01-718-cayman-s-side?w=2560&h=697&q=45&crop=faces%2Centropy%2Cedges&auto=format"
+                width="600" />
+            <div id="ft" class="fuel-type">
+                Gasoline
+            </div>
+        </div>
+        <div onclick="Open911()" class="car-container">
+            <div class="car-title">
+                911
+            </div>
+            <img alt="Image of a 911 car model" height="300"
+                src="https://images-porsche.imgix.net/-/media/243EAB8F810C4DE395A5DD4C0D154B9F_2FA3EAFE31044EE5B0485A499CEBD557_CZ26W03IX0010-911-carrera-s-side?w=2560&h=697&q=45&crop=faces%2Centropy%2Cedges&auto=format"
+                width="600" />
+            <div id="ft" class="fuel-type">
+                Gasoline
+            </div>
+        </div>
+        <div onclick="OpenTC()" class="car-container">
+            <div class="car-title">
+                Taycan
+            </div>
+            <img alt="Image of a Taycan car model" height="300"
+                src="https://images-porsche.imgix.net/-/media/92AF17A38D324AB788D0362DC53C8C52_4B915A284B3C4BEDB1E6EF0FEA2065A8_taycan-4-side?w=2560&h=697&q=45&crop=faces%2Centropy%2Cedges&auto=format"
+                width="600" />
+            <div id="ft" class="fuel-type">
+                Electric
+            </div>
+        </div>
+        <div onclick="OpenPNMR()" class="car-container">
+            <div class="car-title">
+                Panamera
+            </div>
+            <img alt="Image of a Panamera car model" height="300"
+                src="https://images-porsche.imgix.net/-/media/C7ADC76FD1A84CEAAE7024CF325F2F2D_2E34FF94FDAE4D36B91A523A1431136A_panamera-4-e-hybrid-model-intro?w=2560&h=697&q=45&crop=faces%2Centropy%2Cedges&auto=format"
+                width="600" />
+            <div id="ft" class="fuel-type">
+                Hybrid / Gasoline
+            </div>
+        </div>
+    </div>
+
+    <div id="main">
+        <div class="container-col-lg-12">
+            <div id="sidenav" class="header">
+                <div onclick="openNav()" class="menu">
+                    <i class="fas fa-bars"></i> Menu
+                </div>
+                <div onclick="openMenu()" class="logo">
+                    <img src="/image/logio23.png">
+                </div>
+
+            </div>
+            <div class="car-image">
+                <img src="https://cdn.ui.porsche.com/porsche-design-system/model-signatures/911.b68f913.svg">
+            </div>
+        </div>
+        <div class="car-model">
+            <img src="https://images-porsche.imgix.net/-/media/646ED7CDD4DF4060A4823F3A9DB8DA22_97CB2E119D8749C19004EC939CD09E96_CZ25W01IX0010911-carrera-side?w=2560&amp;h=697&amp;q=45&amp;crop=faces%2Centropy%2Cedges&amp;auto=format"
+                width="2560" height="697"
+                srcset="https://images-porsche.imgix.net/-/media/646ED7CDD4DF4060A4823F3A9DB8DA22_97CB2E119D8749C19004EC939CD09E96_CZ25W01IX0010911-carrera-side?w=300&amp;q=45&amp;crop=faces%2Centropy%2Cedges&amp;auto=format 300w,https://images-porsche.imgix.net/-/media/646ED7CDD4DF4060A4823F3A9DB8DA22_97CB2E119D8749C19004EC939CD09E96_CZ25W01IX0010911-carrera-side?w=600&amp;q=45&amp;crop=faces%2Centropy%2Cedges&amp;auto=format 600w,https://images-porsche.imgix.net/-/media/646ED7CDD4DF4060A4823F3A9DB8DA22_97CB2E119D8749C19004EC939CD09E96_CZ25W01IX0010911-carrera-side?w=900&amp;q=45&amp;crop=faces%2Centropy%2Cedges&amp;auto=format 900w,https://images-porsche.imgix.net/-/media/646ED7CDD4DF4060A4823F3A9DB8DA22_97CB2E119D8749C19004EC939CD09E96_CZ25W01IX0010911-carrera-side?w=1200&amp;q=45&amp;crop=faces%2Centropy%2Cedges&amp;auto=format 1200w,https://images-porsche.imgix.net/-/media/646ED7CDD4DF4060A4823F3A9DB8DA22_97CB2E119D8749C19004EC939CD09E96_CZ25W01IX0010911-carrera-side?w=1400&amp;q=45&amp;crop=faces%2Centropy%2Cedges&amp;auto=format 1400w"
+                sizes="(min-width: 1920px) 1311px,(min-width: 760px) 70vw,85vw"
+                alt="Porsche 911 Carrera in Lugano Blue in profile/side view." class="PcomImage__root__1fab8"
+                loading="eager" fetchpriority="high" style="aspect-ratio: 2560 / 697;">
+        </div>
+        <div class="model-info">
+            <h1>Porsche 911</h1>
+            <div class="badge">Gasoline</div>
+            <div class="price">from VND 7,300,000,000.00</div>
+        </div>
+        <div class="buttons">
+            <button onclick="openNav()" class="change-model">Change model</button>
+
+        </div>
+        <div class="section-specs text-center">
+            <div class="row align-items-center">
+                <div class="col-md-5 text-md-left mb-4 mb-md-0">
+                    <div class="specs">
+                        <div>
+                            <span>
+                                4.1
+                            </span>
+                            <small>
+                                s
+                            </small>
+                            <p>
+                                Acceleration 0 - 100 km/h
+                            </p>
+                        </div>
+                        <div>
+                            <span>
+                                290
+                            </span>
+                            kW /
+                            <span>
+                                394
+                            </span>
+                            PS
+                            <p>
+                                Power (kW)/Power (PS)
+                            </p>
+                        </div>
+                        <div>
+                            <span>
+                                294
+                            </span>
+                            km/h
+                            <p>
+                                Top speed
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-7">
+                    <div class="front-car-image   X`">
+                        <img alt="Blue sports car front view" class="img-fluid"
+                            src="https://images-porsche.imgix.net/-/media/5D0BB7E042BD4C9DBEF84B5E70482520_73AA748306934B0C9CE20E32231DFCE2_CZ25W01IX0011911-carrera-front?w=999&q=85&auto=format" />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-sm styles">
+            <div class="container first col-md-12">
+                <img
+                    src="https://images-porsche.imgix.net/-/media/963655E4CCB246C38143117192CBEC4D_B8BFA8556837424FAC527CE61C40A541_CZ25W12OX0001-911-carrera-gts-side-with-man?w=2560&h=1440&q=85&crop=faces%2Centropy%2Cedges&auto=format">
+            </div>
+            <div class="textNside">
+                <div class="text col-md-5 text-md-left mb-4 mb-md-0">
+                    <h2>The one and always.</h2>
+                    <p>Anyone who dreams of a Porsche usually has an image in their mind: the 911 has been the epitome
+                        of an exciting, powerful sports car with day-to-day usability for 60 years. Take a seat behind
+                        the wheel of the new 911 and become part of a unique community.</p>
+                </div>
+                <div class="side col-md-7 col-md-right">
+                    <img
+                        src="https://images-porsche.imgix.net/-/media/888989E42C814B56A68BA563D81DE0A3_BC0C03C58AF840BA8C967DC7531EECBF_CZ25W12OD0001-911-carrera-rear-with-man?w=1496&h=1986&q=45&crop=faces%2Centropy%2Cedges&auto=format">
+                </div>
+            </div>
+            <div class="container last col-md-12">
+                <img
+                    src="https://images-porsche.imgix.net/-/media/82598EE8964C4EA5B6F2C51BE00DB580_7AB084761830470397918B4F1A502CDE_CZ25W12OD0002-911-carrera-side-with-man?w=980&h=708&q=45&crop=faces%2Centropy%2Cedges&auto=format">
+            </div>
+
+        </div>
+        <div class="container-fluid container-slider-1">
+            <div class="background-image-slider">
+                <img
+                    src="https://images-porsche.imgix.net/-/media/87672F7AEDD44522BF03A438A52E7E22_8A00202E839145B48307FE95AAF14888_CZ25W01OX0002-911-carrera-rear?fp-x=0.5&fp-y=0.5&w=1759&ar=21%3A9&q=85&crop=focalpoint&auto=format%201x,https://images-porsche.imgix.net/-/media/87672F7AEDD44522BF03A438A52E7E22_8A00202E839145B48307FE95AAF14888_CZ25W01OX0002-911-carrera-rear?fp-x=0.5&fp-y=0.5&w=1759&ar=21%3A9&q=45&dpr=2&crop=focalpoint&auto=format%202x">
+                <div class="gradient">
+                </div>
+            </div>
+            <div class="slider-1">
+                <h1>Drive.</h1>
+                <input type="radio" name="position" checked />
+                <input type="radio" name="position" />
+                <input type="radio" name="position" />
+                <div id="carousel">
+                    <div class="item">
+                        <div class="container-fluid container-slider">
+                            <img src="https://images-porsche.imgix.net/-/media/1A0257215D944B77BF86BB7BE91F9C7F_5D110183787F4BCD8C2CBFC8EA3EFF2E_CZ20MODTD0021-1-911-carrera-engine?w=999&ar=27%3A11&q=85&auto=format"
+                                alt="3.0-litre flat-6 engine" class="engine-image">
+                            <div class="row slider-text">
+                                <div class="title-item col-md-4">
+                                    <h2 class="fw-bold">3.0-litre flat-6 </h2>
+                                    <h2 class="fw-bold fw-bold-2">engine.</h2>
+                                </div>
+                                <div class="col-md-8">
+                                    <p class="text-muted">
+                                        The powerful 3.0-litre 6-cylinder flat engine with twin turbochargers will give
+                                        you goosebumps with its incomparable sound alone.
+                                        The horizontally opposed construction and the traditional position in the rear
+                                        end of the vehicle also allows for a low centre of gravity.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="container-fluid container-slider">
+                            <img class="slider-img-2"
+                                src="https://images-porsche.imgix.net/-/media/38408DFB52B949E693C0BCA5F6C48827_B9C33CCB34F94799AB29971D382F90E0_CZ20V00GR0044-911-carrera-engine?w=999&ar=125%3A66&q=85&auto=format"
+                                alt="3.0-litre flat-6 engine" class="engine-image">
+                            <div class="row slider-text-2">
+                                <div class="title-item col-md-4">
+                                    <h2 class="fw-bold">Performance.</h2>
+                                </div>
+                                <div class="col-md-8">
+                                    <p class="text-muted">
+                                        Peak performance: 290 kW (394 PS). Top speed: 294 km/h. With this technical
+                                        data, a maximum torque of 450 Nm and a sprint from 0 to 100 km/h in 4.1 s, it's
+                                        highly unlikely that you will ever want to get out again.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="container-fluid">
+                            <img src="https://images-porsche.imgix.net/-/media/B798FA2CCC40446A84F9A39AA007ABAB_BCF6EC1137B54F73B18D7B15A7E73F2C_CZ20V00GR0026-911-carrera-pdk?w=999&ar=27%3A11&q=85&auto=format"
+                                alt="3.0-litre flat-6 engine" class="engine-image">
+                            <div class="row slider-text">
+                                <div class="title-item col-md-5">
+                                    <h2 class="fw-bold">PDK.</h2>
+                                </div>
+                                <div class="col-md-7">
+                                    <p class="text-muted">
+                                        The 8-speed Porsche Doppelkupplung (PDK) allows extremely fast gear changes
+                                        without interrupting the flow of power – even by a millisecond. The PDK combines
+                                        sports tuning in 1st to 6th gear with efficient overdrive ratios (7th and 8th
+                                        gear).
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-highlights container-fluid">
+            <h1>Highlights</h1>
+            <div class="highlight-slider">
+                <input type="radio" name="position" checked />
+                <input type="radio" name="position" />
+                <input type="radio" name="position" />
+                <input type="radio" name="position" />
+                <input type="radio" name="position" />
+                <div id="carousel">
+                    <div class="item item-1">
+                        <div class="text-content">
+                            <h2>Design.</h2>
+                            <p>Clear lines and a muscular rear section create a much sharper character. On the GTS
+                                models, the newly designed front apron with striking vertical aerodynamic elements
+                                including adaptive air intake flaps provide a further distinctive visual feature.</p>
+                        </div>
+                        <div class="container-slider">
+                            <img src="https://images-porsche.imgix.net/-/media/D27C86383B194419BCD972ED7E0303C1_1C279BF03C5D4318BFC306BD1A61EFE3_CZ25W12OX0002-911-carrera-gts-side?w=850&q=85&auto=format 1x,https://images-porsche.imgix.net/-/media/D27C86383B194419BCD972ED7E0303C1_1C279BF03C5D4318BFC306BD1A61EFE3_CZ25W12OX0002-911-carrera-gts-side?w=850&q=45&dpr=2&auto=format 1x"
+                                alt="A sleek, modern car with clear lines and a muscular rear section">
+                        </div>
+                    </div>
+                    <div class="item item-2">
+                        <div class="text-content">
+                            <h2>Headlights.</h2>
+                            <p>Expressive and typically Porsche: the new Matrix LED main headlights, including all
+                                lighting functions such as the 4-point daytime running lights, increase the distinctive
+                                look of the 911 from afar with their lighting signature.</p>
+                        </div>
+                        <div class="container-slider">
+                            <img
+                                src="https://images-porsche.imgix.net/-/media/B37C808F45A84E7F946EEC0715166A41_6B8DD45CDFE94C4A992916298D594548_CZ25W12OD0003-911-carrera-gts-headlight?w=650&q=85&auto=format%201x,https://images-porsche.imgix.net/-/media/B37C808F45A84E7F946EEC0715166A41_6B8DD45CDFE94C4A992916298D594548_CZ25W12OD0003-911-carrera-gts-headlight?w=650&q=45&dpr=2&auto=format%202x">
+                        </div>
+                    </div>
+                    <div class="item item-3">
+                        <div class="text-content">
+                            <h2>Dynamics.</h2>
+                            <p>The PASM sports chassis (-10 mm) with helper springs at the rear and the rear-axle
+                                steering increase the performance on the circuit as standard on the 911 Carrera GTS
+                                models.</p>
+                        </div>
+                        <div class="container-slider">
+                            <img
+                                src="https://images-porsche.imgix.net/-/media/64E3C827A8B2427DA7FC7C4BD0FF637B_4E472EF36FFA421EB3D4BA0BAAB4AC1A_CZ25W12OX0004-911-carrera-gts-rear?w=850&q=85&auto=format%201x,https://images-porsche.imgix.net/-/media/64E3C827A8B2427DA7FC7C4BD0FF637B_4E472EF36FFA421EB3D4BA0BAAB4AC1A_CZ25W12OX0004-911-carrera-gts-rear?w=850&q=45&dpr=2&auto=format%202x">
+                        </div>
+                    </div>
+                    <div class="item item-4">
+                        <div class="text-content">
+                            <h2>Driver Experience.</h2>
+                            <p>The instrument cluster with 12.65-inch curved display puts the focus on the central rev
+                                counter with the classic five-tube view or the reduced Sport Chrono screen</p>
+                        </div>
+                        <div class="container-slider">
+                            <img
+                                src="https://images-porsche.imgix.net/-/media/DDF0436BF37846BB9EA0D402E8ABA1AD_F43B8BEEBC7A4CAEA293000D31C00766_CZ25W12OD0004-911-carrera-gts-steering-wheel?w=410&q=85&auto=format 1x,https://images-porsche.imgix.net/-/media/DDF0436BF37846BB9EA0D402E8ABA1AD_F43B8BEEBC7A4CAEA293000D31C00766_CZ25W12OD0004-911-carrera-gts-steering-wheel?w=410&q=45&dpr=2&auto=format 2x">
+                        </div>
+                    </div>
+                    <div class="item item-5">
+                        <div class="text-content">
+                            <h2>Porsche Connect.</h2>
+                            <p>The further integration of Apple® CarPlay® enables improved Siri functionality and
+                                control of vehicle functions, to name just a couple. In-car video streaming ensures the
+                                best entertainment when not driving on the road.</p>
+                        </div>
+                        <div class="container-slider">
+                            <img
+                                src="https://images-porsche.imgix.net/-/media/B223856770CF433B9B6456FB82CB69BF_2ADA0E9C5A224A14955D8E0053081D91_CZ25W12OD0005-911-carrera-gts-infotainment?w=650&q=85&auto=format 1x,https://images-porsche.imgix.net/-/media/B223856770CF433B9B6456FB82CB69BF_2ADA0E9C5A224A14955D8E0053081D91_CZ25W12OD0005-911-carrera-gts-infotainment?w=650&q=45&dpr=2&auto=format 2x">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+        <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+
+        <h1 style="font-weight: 5000">See in 3D.</h1>
+        <model-viewer
+            src="/image/718.glb"
+            alt="3D Model"
+            camera-controls
+            auto-rotate
+            shadow-intensity="2"
+            environment-image="neutral"
+            camera-orbit="0deg 75deg 5m"
+            field-of-view="60deg"
+            exposure="1.5"
+            orbit-sensitivity = "0.3"
+            min-camera-orbit="auto 0deg auto"
+            max-camera-orbit="auto 90deg auto"
+            style="width: 100%; height: 500px; background-color:  whitesmoke;">
+
+        </model-viewer>
+
+        
+        <div class="section-footer">
+            <h4>© 2025 Porsche Cars North America, Inc.
+                Legal notice.
+
+                Privacy notice.
+
+                California Privacy.
+
+                Accessibility Statement.
+
+                NMLS #3164
+
+                Open Source Software Notice.
+
+                Do Not Sell or Share My Personal Information.
+
+                Whistleblower System.
+
+                Emergency Responders.
+
+                In-Use Verification Program.
+
+
+                Certification of Compliance.
+            </h4>
+            <img src="/image/pngwing.com.png">
+        </div>
+    </div>
+</body>
+</div>
+</div>
+</body>
+
+</html>

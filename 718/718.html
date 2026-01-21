@@ -1,0 +1,366 @@
+<html>
+
+<head>
+    <title>Porsche 718</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="718.css" type="text/css">
+</head>
+
+<body>
+    <script src="/javascript/cars.js"></script>
+    <script src="/javascript/ps.js"></script>
+
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <div onclick="Open718()" class="car-container">
+            <div class="car-title">
+                718
+            </div>
+            <img alt="Image of a 718 car model" height="300"
+                src="https://images-porsche.imgix.net/-/media/4D76222C0FFD456B9F8F93CC638725CD_269E9C4B98FF4C54B6DE2F8741B844F0_CM24N3CIX0006-01-718-cayman-s-side?w=2560&h=697&q=45&crop=faces%2Centropy%2Cedges&auto=format"
+                width="600" />
+            <div id="ft" class="fuel-type">
+                Gasoline
+            </div>
+        </div>
+        <div onclick="Open911()" class="car-container">
+            <div class="car-title">
+                911
+            </div>
+            <img alt="Image of a 911 car model" height="300"
+                src="https://images-porsche.imgix.net/-/media/243EAB8F810C4DE395A5DD4C0D154B9F_2FA3EAFE31044EE5B0485A499CEBD557_CZ26W03IX0010-911-carrera-s-side?w=2560&h=697&q=45&crop=faces%2Centropy%2Cedges&auto=format"
+                width="600" />
+            <div id="ft" class="fuel-type">
+                Gasoline
+            </div>
+        </div>
+        <div onclick="OpenTC()" class="car-container">
+            <div class="car-title">
+                Taycan
+            </div>
+            <img alt="Image of a Taycan car model" height="300"
+                src="https://images-porsche.imgix.net/-/media/92AF17A38D324AB788D0362DC53C8C52_4B915A284B3C4BEDB1E6EF0FEA2065A8_taycan-4-side?w=2560&h=697&q=45&crop=faces%2Centropy%2Cedges&auto=format"
+                width="600" />
+            <div id="ft" class="fuel-type">
+                Electric
+            </div>
+        </div>
+        <div onclick="OpenPNMR()" class="car-container">
+            <div class="car-title">
+                Panamera
+            </div>
+            <img alt="Image of a Panamera car model" height="300"
+                src="https://images-porsche.imgix.net/-/media/C7ADC76FD1A84CEAAE7024CF325F2F2D_2E34FF94FDAE4D36B91A523A1431136A_panamera-4-e-hybrid-model-intro?w=2560&h=697&q=45&crop=faces%2Centropy%2Cedges&auto=format"
+                width="600" />
+            <div id="ft" class="fuel-type">
+                Hybrid / Gasoline
+            </div>
+        </div>
+    </div>
+
+    <div id="main">
+        <div class="container-col-lg-12">
+            <div id="sidenav" class="header">
+                <div onclick="openNav()" class="menu">
+                    <i class="fas fa-bars"></i> Menu
+                </div>
+                <div onclick="openMenu()" class="logo">
+                    <img src="/image/logio23.png">
+                </div>
+
+            </div>
+            <div class="car-image">
+                <img src="https://cdn.ui.porsche.com/porsche-design-system/model-signatures/718.493a9e3.svg">
+            </div>
+        </div>
+        <div class="car-model">
+            <img
+                src="https://images-porsche.imgix.net/-/media/17F4A852520E4281A2272807457BC4FE_8D0254A8C72E42E1844FD52A1C9F3457_CM24N3BIX0001-718-cayman-side?w=1400&q=85&crop=faces%2Centropy%2Cedges&auto=format">
+        </div>
+        <div class="model-info">
+            <h1>Porsche 718</h1>
+            <div class="badge">Gasoline</div>
+            <div class="price">from VND 7,300,000,000.00</div>
+        </div>
+        <div class="buttons">
+            <button onclick="openNav()" class="change-model">Change model</button>
+
+        </div>
+        <div class="section-specs text-center">
+            <div class="row align-items-center">
+                <div class="col-md-5 text-md-left mb-4 mb-md-0">
+                    <div class="specs">
+                        <div>
+                            <span>
+                                4.7
+                            </span>
+                            <small>
+                                s
+                            </small>
+                            <p>
+                                Acceleration 0 - 100 km/h
+                            </p>
+                        </div>
+                        <div>
+                            <span>
+                                220
+                            </span>
+                            kW /
+                            <span>
+                                300
+                            </span>
+                            PS
+                            <p>
+                                Power (kW)/Power (PS)
+                            </p>
+                        </div>
+                        <div>
+                            <span>
+                                275
+                            </span>
+                            km/h
+                            <p>
+                                Top speed
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-7">
+                    <div class="front-car-image   X`">
+                        <img alt="Blue sports car front view" class="img-fluid"
+                            src="https://images-porsche.imgix.net/-/media/48BCFD633E0C4894A75B9DAC385AC466_ABAEF121341E4A5C9817D8665BE00DCD_CM21N3BIX0004-02-718-cayman-front?w=750&q=85&auto=format" />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-sm styles">
+            <div class="container first col-md-12">
+                <img
+                    src="https://images-porsche.imgix.net/-/media/19280935E92747B5838D430742C0AF36_ACF60B398E664128AD35B6C50D6D2AD7_CM21N3BOX0002-1-718-cayman-driving?w=1500&q=85&crop=faces%2Centropy%2Cedges&auto=format">
+            </div>
+            <div class="textNside">
+                <div class="text col-md-5 text-md-left mb-4 mb-md-0">
+                    <h1>Built for a life centred around sport.</h1>
+                    <p>The 718 models transfer the racing spirit of the legendary Porsche mid-engined race cars from the
+                        1950s and 1960s – such as the 718 RSK Spyder or the 718 GTR Coupe – to the roads of today with
+                        one goal: to elevate the everyday beyond the ordinary.</p>
+                </div>
+                <div class="side col-md-7 col-md-right">
+                    <img
+                        src="https://images-porsche.imgix.net/-/media/A84073FB7B544203B7471B7FC782535B_D93EC7D7EEC64918853DD094066336D0_CM24N3COX0010-718-cayman-s-front?w=900&q=85&crop=faces%2Centropy%2Cedges&auto=format">
+                </div>
+            </div>
+            <div class="container last col-md-12">
+                <img
+                    src="https://images-porsche.imgix.net/-/media/D225C4B755F74F588EB220DBAA7F25EC_2CD28C246E294151B271AE263051B2D2_CM23N3COX0001-718-cayman-s-rear?w=900&q=85&crop=faces%2Centropy%2Cedges&auto=format">
+            </div>
+
+        </div>
+        <div class="container-fluid container-slider-1">
+            <div class="background-image-slider">
+                <img
+                    src="https://images-porsche.imgix.net/-/media/A1DD96C5BFD04A33B3E61FDCBA4EB13F_D9C3344D19E945E1A752B77B78A78275_CM21N3BOX0006-718-cayman-driving?fp-x=0.5&fp-y=0.5&w=1299&ar=16%3A9&q=85&crop=focalpoint&auto=format">
+                <div class="gradient">
+                </div>
+            </div>
+            <div class="slider-1">
+                <h1>Fast, powerful, quick-witted. Unequivocally a boxer.</h1>
+                <input type="radio" name="position" checked />
+                <input type="radio" name="position" />
+                <input type="radio" name="position" />
+                <div id="carousel">
+                    <div class="item">
+                        <div class="container-slider">
+                            <img src="https://images-porsche.imgix.net/-/media/BE7370BA8473497DA24BF51CA40112F4_CF2BE716CFD4446991CDE9B362C6D369_BX24I3ATD0022-01-718-cayman-gts-40-turbo-engine?fp-x=0.5&fp-y=0.5&w=750&ar=125%3A66&q=85&crop=focalpoint&auto=format"
+                                alt="3.0-litre flat-6 engine" class="engine-image">
+                            <div class="row slider-text">
+                                <div class="title-item col-md-4">
+                                    <h2 class="fw-bold"></h2>
+                                    <h2 class="fw-bold fw-bold-2">Turbo engine.</h2>
+                                </div>
+                                <div class="col-md-8">
+                                    <p class="text-muted">
+                                        The four-cylinder boxer engines of the 718, 718 Style Edition and 718 S models
+                                        are designed to be powerful and efficient. The Turbo technology with a compact
+                                        exhaust turbocharger that is optimally adapted to the displacement and power of
+                                        the engine is responsible for this.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="container-slider">
+                            <img class="slider-img-2"
+                                src="https://images-porsche.imgix.net/-/media/FF15986E42DC4C46A4BA7A854C55EA2A_F7120A5355614A56A44E6887D625638C_BC24MODGR0001-01-718-cayman-engine?fp-x=0.5&fp-y=0.5&w=818&ar=27%3A11&q=85&crop=focalpoint&auto=format"
+                                alt="3.0-litre flat-6 engine" class="engine-image">
+                            <div class="row slider-text-2">
+                                <div class="title-item col-md-4">
+                                    <h2 class="fw-bold">Naturally aspirated</h2>
+                                    <h2 class="fw-bold fw-bold-2">engine.</h2>
+                                </div>
+                                <div class="col-md-8">
+                                    <p class="text-muted">
+                                        In the 718 GTS 4.0 models, the 4.0-litre-6-cylinder naturally aspirated engine
+                                        with 294 kW (400 PS) at 7,000 1/min delivers powerful propulsion and an enormous
+                                        performance spectrum. Responsiveness? Direct. High revs? Oh yes. Highly
+                                        emotional yet efficient.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="container-slider">
+                            <img src="https://images-porsche.imgix.net/-/media/B798FA2CCC40446A84F9A39AA007ABAB_BCF6EC1137B54F73B18D7B15A7E73F2C_CZ20V00GR0026-911-carrera-pdk?w=999&ar=27%3A11&q=85&auto=format"
+                                alt="3.0-litre flat-6 engine" class="engine-image">
+                            <div class="row slider-text">
+                                <div class="title-item col-md-5">
+                                    <h2 class="fw-bold">PDK.</h2>
+                                </div>
+                                <div class="col-md-7">
+                                    <p class="text-muted">
+                                        The 7-speed PDK with manual and automatic modes allows for extremely fast gear
+                                        changes without interruption in traction. In manual mode, the direction of
+                                        shifting is the same as in race cars – upshift to the rear, downshift to the
+                                        front.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-highlights container-fluid">
+            <h1>Highlights</h1>
+            <div class="highlight-slider">
+                <input type="radio" name="position" checked />
+                <input type="radio" name="position" />
+                <input type="radio" name="position" />
+                <input type="radio" name="position" />
+                <input type="radio" name="position" />
+                <div id="carousel">
+                    <div class="item item-1">
+                        <div class="text-content">
+                            <h2>Design.</h2>
+                            <p>Precise, not playful. Confident, not reserved. Deep, wide, flat. The design of the 718
+                                models is characterised by clearly defined shapes and the unmistakable silhouette with a
+                                characteristic mid-engine flyline.</p>
+                        </div>
+                        <div class="container-slider">
+                            <img src="https://images-porsche.imgix.net/-/media/6A25581E73F9453B9D5F9AECB47F2304_A2E25FFF62674130AA066579D108BC3D_CM24N3COX0011-718-cayman-design?w=850&q=85&auto=format 1x,https://images-porsche.imgix.net/-/media/6A25581E73F9453B9D5F9AECB47F2304_A2E25FFF62674130AA066579D108BC3D_CM24N3COX0011-718-cayman-design?w=850&q=45&dpr=2&auto=format 2x"
+                                alt="A sleek, modern car with clear lines and a muscular rear section">
+                        </div>
+                    </div>
+                    <div class="item item-2">
+                        <div class="text-content">
+                            <h2>Rear wing.</h2>
+                            <p>The rear wing automatically extends from speeds of 125 km/h, and reduces lift for better
+                                traction.</p>
+                        </div>
+                        <div class="container-slider">
+                            <img
+                                src="https://images-porsche.imgix.net/-/media/3DD80163ECBB49DBBAFF8C16F3C49293_9A3BF2BBDD53491DBD985781F298D59B_CM24N3COX0007-718-cayman-wing?w=650&q=85&auto=format 1x,https://images-porsche.imgix.net/-/media/3DD80163ECBB49DBBAFF8C16F3C49293_9A3BF2BBDD53491DBD985781F298D59B_CM24N3COX0007-718-cayman-wing?w=650&q=45&dpr=2&auto=format 2x">
+                        </div>
+                    </div>
+                    <div class="item item-3">
+                        <div class="text-content">
+                            <h2>Mid-engine sports car.</h2>
+                            <p>In the 718 models, the mid-engine concept with boxer engine results in a low and central
+                                centre of gravity. For dynamic cornering and top driving performance.</p>
+                        </div>
+                        <div class="container-slider">
+                            <img
+                                src="https://images-porsche.imgix.net/-/media/9BBADF4AD7984720A025C38A2B5938CE_6019BBD4A6DA474C827E90C040273603_CM24N3COX0004-718-cayman-s-rear?w=410&q=85&auto=format 1x,https://images-porsche.imgix.net/-/media/9BBADF4AD7984720A025C38A2B5938CE_6019BBD4A6DA474C827E90C040273603_CM24N3COX0004-718-cayman-s-rear?w=410&q=45&dpr=2&auto=format 2x">
+                        </div>
+                    </div>
+                    <div class="item item-4">
+                        <div class="text-content">
+                            <h2>Chassis.</h2>
+                            <p>Characteristic Porsche sporty chassis tuning and direct steering for agile handling for
+                                superior cornering performance. The optional Porsche Active Suspension Management (PASM)
+                                lowered by 10 mm offers even greater performance.</p>
+                        </div>
+                        <div class="container-slider">
+                            <img
+                                src="https://images-porsche.imgix.net/-/media/88A3323910EB472E9AD2C4F0E0692B1C_AAAEB55289FA460580ED9650842E502E_CM24N3COX0009-718-cayman-chassis?w=850&q=85&auto=format 1x,https://images-porsche.imgix.net/-/media/88A3323910EB472E9AD2C4F0E0692B1C_AAAEB55289FA460580ED9650842E502E_CM24N3COX0009-718-cayman-chassis?w=850&q=45&dpr=2&auto=format 2x">
+                        </div>
+                    </div>
+                    <div class="item item-5">
+                        <div class="text-content">
+                            <h2>Interior concept.</h2>
+                            <p>Intuitive handling, performance-oriented ergonomics and a clean design. The interior of
+                                the 718 models is also fully geared towards sporty performance.</p>
+                        </div>
+                        <div class="container-slider">
+                            <img
+                                src="https://images-porsche.imgix.net/-/media/26C9F72CE4C64763B3C7DCBE8E2BB095_78DC3FC34F2A48EC855CCE443CB3D117_CM24N3BID0001-02-718-cayman-interior?w=410&q=85&auto=format 1x,https://images-porsche.imgix.net/-/media/26C9F72CE4C64763B3C7DCBE8E2BB095_78DC3FC34F2A48EC855CCE443CB3D117_CM24N3BID0001-02-718-cayman-interior?w=410&q=45&dpr=2&auto=format 2x">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+
+        <h1 style="font-weight: 5000">See in 3D.</h1>
+        <model-viewer
+            src="/image/718.glb"
+            alt="3D Model"
+            camera-controls
+            auto-rotate
+            shadow-intensity="2"
+            environment-image="neutral"
+            camera-orbit="0deg 75deg 5m"
+            field-of-view="60deg"
+            exposure="1.5"
+            orbit-sensitivity = "0.3"
+            min-camera-orbit="auto 0deg auto"
+            max-camera-orbit="auto 90deg auto"
+            style="width: 100%; height: 500px; background-color:  whitesmoke;">
+
+        </model-viewer>
+
+
+
+    </div>
+    <div class="section-footer">
+        <h4>© 2025 Porsche Cars North America, Inc.
+            Legal notice.
+
+            Privacy notice.
+
+            California Privacy.
+
+            Accessibility Statement.
+
+            NMLS #3164
+
+            Open Source Software Notice.
+
+            Do Not Sell or Share My Personal Information.
+
+            Whistleblower System.
+
+            Emergency Responders.
+
+            In-Use Verification Program.
+
+
+            Certification of Compfliance.
+        </h4>
+        <img src="/image/pngwing.com.png">
+    </div>
+    </div>
+</body>
+</div>
+</div>
+</body>
+
+</html>

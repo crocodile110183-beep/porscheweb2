@@ -1,0 +1,794 @@
+@font-face {
+    font-family: 'porsche-next';
+    src: url(/fonts/porsche-next.otf) format('OpenType')
+}
+
+.blur {
+    filter: blur(50px) brightness(0.5);
+    transition: filter 0.3s ease;
+}
+
+body,
+html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    font-family: 'porsche-next', sans-serif;
+    color: white;
+    overflow-y: scroll;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    scroll-behavior: smooth;
+}
+#body {
+    transition: ease 1s;
+}
+#color-entry {
+    transition: ease 1s;
+}
+.white {
+    color: white;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-image: url('https://porsche.imgix.net/-/media/DAF6D2515C624F1EA3DC43C8AD027044_3569D0F4A9D3496DAF7AD2E70F9E2B0D_00---911-Targa-4S---fallback---Desktop_new?iar=0&w=1759&ar=4%3A3&q=85&auto=format');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-position-y: 2px;
+    overflow: hidden;
+
+}
+
+footer {
+    margin-top: 300px;
+    background-color: rgb(3, 0, 10);
+    text-align: center;
+}
+
+footer img {
+    width: 20%;
+    height: auto;
+    margin-top: 75px;
+    margin-bottom: 50px;
+    filter: invert(1);
+}
+
+.users button {
+    background-color: transparent;
+    border-color: transparent;
+}
+
+.users img {
+    filter: invert(1);
+    width: auto;
+    height: 30px;
+}
+
+
+.users {
+    position: relative;
+    display: inline-block;
+}
+
+.user-dropdown {
+    right: 0;
+    display: none;
+    position: absolute;
+    background-color: white;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    min-width: 160px;
+    z-index: 1;
+    flex-direction: column;
+}
+
+.user-dropdown a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.users:hover .user-dropdown {
+    display: block;
+}
+
+.user-dropdown a:hover {
+    background-color: #ddd;
+}
+
+.content h1,
+.content button {
+    color: white;
+}
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 10000000;
+    top: 0;
+    left: 0;
+    text-align: center;
+    background-color: #ececec;
+    overflow-x: hidden;
+    padding-top: 60px;
+    transition: 0.5s;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+.sidenav .sidenav2 {
+    z-index: 50000;
+    filter: blur(5px)
+}
+
+.car-container {
+    position: relative;
+    background-color: #ececec;
+    border-radius: 10px;
+    color: #000;
+    padding: 0;
+    margin: 10px;
+}
+
+.car-container:not(:hover) {
+    background-color: #fff;
+    transition: background-color 0.35s ease;
+}
+
+.car-container:hover {
+    background-color: #cdcdcd;
+    transition: background-color 0.35s ease;
+}
+
+.car-container:not(:hover) #ft {
+    background-color: #cdcdcd;
+    transition: background-color 0.35s ease;
+}
+
+.car-container:hover #ft {
+    background-color: #fff;
+    transition: background-color 0.35s ease;
+}
+
+.car-container img {
+    height: 20%;
+    width: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+}
+
+.car-title {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 24px;
+    color: black;
+    padding: 5px 10px;
+}
+
+.fuel-type {
+    color: black;
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    display: inline-block;
+    border-radius: 5px;
+    padding: 5px 10px;
+    font-size: 14px;
+    margin-right: 10px;
+}
+
+
+
+
+.header {
+    display: flex;
+    align-items: center;
+    height: 50px;
+    padding: 20px;
+    border-bottom: 1px;
+    background: #000000;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 1) 9%, rgba(237, 221, 83, 0) 100%);
+}
+
+.header .menu {
+    font-size: 24px;
+    z-index: 2;
+}
+
+.header .logo {
+    width: 100%;
+    filter: brightness(0) invert();
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    z-index: 12;
+}
+
+.header .logo img {
+    height: 75px;
+}
+
+.content {
+    position: absolute;
+    bottom: 20%;
+    left: 10%;
+    text-align: left;
+    z-index: 1000;
+}
+
+.content h1 {
+    font-size: 120px;
+    margin: 0;
+    font-weight: lighter;
+}
+
+.content .button {
+    font-family: 'porsche-next';
+    src: url(/fonts/porsche-next.otf) format('OpenType');
+    font-weight: 20px;
+    margin-top: 20px;
+    padding: 10px 20px;
+    border: 2px solid white;
+    background: transparent;
+    color: white;
+    font-size: 18px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.content .button:hover {
+    margin-top: 20px;
+    padding: 10px 20px;
+    border: 2px solid white;
+    background: transparent;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0px;
+    display: flex;
+    gap: 10px;
+    background: linear-gradient(to top, black, transparent);
+    height: 500px;
+    width: 100%;
+}
+
+.footer .icon {
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.section-part1 {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    z-index: 10;
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.OpenMarket img {
+    width: 100%;
+    overflow: hidden;
+    align-self: center;
+    border-radius: 20px;
+    transition: ease 0.4s;
+    justify-content: center;
+    
+}
+
+.OpenMarket img:hover{
+    filter: saturate(0.7);
+    transition: ease 0.4s;
+}
+.smoltext {
+    margin-top: -75px;
+    margin-left: 25px;
+    z-index: 20;
+    color: black;
+}
+
+.section-part2 {
+    max-width: 1700px;
+    margin: 0 auto;
+    padding: 20px 0;
+    z-index: 10;
+    margin-top: 50px;
+    justify-content: center;
+}
+.section-part2 {
+    max-width: 1700px;
+    margin: 0 auto;
+    padding: 20px 0;
+    z-index: 10;
+    margin-top: 50px;
+    justify-content: center;
+}
+
+.part1grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    gap: 30px;
+}
+
+.part2container {
+    display: flex;
+    justify-content: center;
+    margin: 50px auto;
+    display: flex;
+}
+.part3container {
+    display: flex;
+    justify-content: center;
+    margin: 50px auto;
+    display: flex;
+}
+
+.card {
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 120%;
+}
+
+.card img {
+    width: 115%;
+    height: auto;
+    display: block;
+}
+
+.card-2 {
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    height: 250px;
+    width: 120%
+}
+
+.card-2 img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.card-3 img {
+    width: 100%;
+    height: auto;
+}
+
+.card:hover img {
+    transition: transform 0.5s ease;
+    transform: scale(1.035);
+}
+
+.card:not(:hover) img {
+    transition: transform 0.5s ease;
+    transform: scale(1.00);
+}
+
+.card-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 20px;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0));
+    color: white;
+}
+
+.card-content h3 {
+    margin: 0;
+    font-size: 1.2em;
+}
+
+.card-content p {
+    margin: 5px 0 0;
+    font-size: 0.9em;
+}
+
+.models-title {
+    transform: translateX(3%);
+    font-size: 4.5em;
+    font-weight: 50;
+    margin: 40px 0 50px;
+    margin-top: 100px;
+    color: #000;
+}
+
+.shrink {
+    width: 75% !important;
+    animation: filter 0.8s forwards !important;
+
+
+}
+
+.filter {
+    animation: filter-remove 0.8s;
+}
+
+
+.fuck1 {
+
+    display: flex;
+    margin-right: -120px;
+
+    display: flex;
+    justify-content: left;
+
+}
+
+.fuck2 {
+
+    display: flex;
+    margin-left: -120px;
+    display: flex;
+    justify-content: right;
+}
+.fuck3 {
+
+    display: flex;
+    margin-right: -120px;
+
+    display: flex;
+    justify-content: left;
+
+}
+
+.fuck4 {
+
+    display: flex;
+    margin-left: -120px;
+    
+    display: flex;
+    justify-content: right;
+}
+
+#card-1 {
+
+    background-color: #ddd;
+    margin: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: ease width 0.6s;
+
+}
+
+#card-2 {
+
+    background-color: #ddd;
+    margin: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: ease width 0.6s;
+
+}
+#card-3 {
+
+    background-color: #ddd;
+    margin: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: ease width 0.6s;
+
+}
+
+#card-4 {
+
+    background-color: #ddd;
+    margin: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: ease width 0.6s;
+
+}
+
+#card-1:hover {
+    width: 95%;
+}
+
+#card-2:hover {
+    width: 95%;
+}
+#card-3:hover {
+    width: 95%;
+}
+
+#card-4:hover {
+    width: 95%;
+}
+
+
+.model-card {
+    position: relative;
+    width: 85%;
+
+    height: 600px;
+    background-color: #ddd;
+    overflow: hidden;
+    border-radius: 10px;
+
+    align-items: center;
+    justify-content: center;
+
+
+}
+
+.model-card img {
+    height: 130%;
+    width: auto;
+    object-fit: cover;
+}
+
+.model-card-content,
+.model-card-content-1 {
+    position: absolute;
+    z-index: 2;
+    pointer-events: none;
+
+}
+
+.model-card-content-1 {
+    top: 20px;
+    left: 20px;
+}
+
+.model-card-content {
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 20px;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+}
+
+
+.model-card-content-1 {
+
+    top: 20px;
+    left: 20px;
+    color: rgb(163, 163, 163);
+    z-index: 1000;
+}
+
+.model-card-content-1 h3 {
+    margin: 0;
+    font-size: 2.0em;
+    left: 20px;
+    color: rgb(163, 163, 163);
+}
+
+.model-card-content-1 p {
+    left: 20px;
+    color: rgb(163, 163, 163);
+    display: inline-block;
+    padding: 5px 10px;
+    border: 1px solid rgb(163, 163, 163);
+    border-radius: 5px;
+    font-size: 14px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.model-card-content h3 {
+    margin: 0;
+    font-size: 2.0em;
+}
+
+.model-card-content .model-words {
+    margin: 3px 0 0;
+    font-size: 1.8em;
+}
+
+.model-card-content .price {
+    margin: 10px 0;
+    font-size: 0.9em;
+}
+
+.model-card-content .buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.model-card-content .buttons a {
+    margin-top: 20px;
+    padding: 10px 20px;
+    border: 2px solid white;
+    background: white;
+    border-radius: 4px;
+    color: black;
+    font-size: 0.9em;
+    font-weight: bold;
+    cursor: pointer;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+.section-footer {
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+    height: 1000px;
+    background-color: rgb(8, 8, 8);
+    margin-top: 300px;
+}
+
+.section-footer h4 {
+    padding: 20px;
+    font-size: 25px;
+    font-weight: 100;
+}
+
+.section-footer img {
+    margin-left: 35%;
+    z-index: 1000;
+    margin-top: -500px;
+    filter: brightness(100000000%);
+}
+
+
+
+
+
+@font-face {
+    font-family: 'Porsche-Next';
+    src: url('fonts/porsche-next.otf') format('opentype');
+}
+
+.fadeInUp {
+    animation: fadeInUp 1s;
+}
+
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes filter {
+    0% {
+        filter: brightness(1)
+    }
+
+    100% {
+        filter: brightness(0.8)
+    }
+}
+
+@keyframes filter-remove {
+    0% {
+        filter: brightness(0.8)
+    }
+
+    100% {
+        filter: brightness(1)
+    }
+}
+@media (max-width: 768px) {
+    .container {
+        height: auto;
+        padding: 20px 0;
+        background-position: center;
+    }
+
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .header .logo img {
+        height: 50px;
+    }
+
+    .content {
+        position: relative;
+        left: auto;
+        bottom: auto;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .content h1 {
+        font-size: 42px;
+    }
+
+    .content .button {
+        font-size: 16px;
+        padding: 8px 16px;
+    }
+
+    .section-part1,
+    .section-part2,
+    .part2container,
+    .part3container {
+        flex-direction: column;
+        align-items: center;
+        width: 95%;
+        margin: auto;
+    }
+
+    .fuck1, .fuck2, .fuck3, .fuck4 {
+        margin: 0;
+        justify-content: center;
+    }
+
+    .model-card {
+        width: 95%;
+        height: auto;
+    }
+
+    .model-card img {
+        width: 100%;
+        height: auto;
+    }
+
+    .users {
+        align-self: flex-end;
+        margin-top: 10px;
+    }
+
+    footer img {
+        width: 60%;
+    }
+
+    .models-title {
+        font-size: 2em;
+        text-align: center;
+    }
+
+    .OpenMarket img {
+        width: 100%;
+        height: auto;
+    }
+
+    .smoltext {
+        margin-top: 15px;
+        margin-left: 0;
+        text-align: center;
+    }
+}

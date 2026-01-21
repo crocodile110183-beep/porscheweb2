@@ -1,0 +1,795 @@
+/* Porsche Marketplace Styles */
+
+/* Font Imports */
+@font-face {
+    font-family: 'PorscheNext';
+    font-style: normal;
+    font-weight: 400;
+    src: url('https://ext.same-assets.com/2503352466/3705982961.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'PorscheNext';
+    font-style: normal;
+    font-weight: 700;
+    src: url('https://ext.same-assets.com/2503352466/3488093016.woff2') format('woff2');
+}
+
+/* Base Styles */
+html,
+body {
+    background: #f3f3f5;
+    /* Light gray background from reference image */
+    margin: 0;
+    padding: 0;
+    font-family: 'PorscheNext', Arial, sans-serif;
+    color: #191919;
+    /* Dark text for contrast */
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Header Styles */
+.header {
+    background-color: #ffffff;
+    /* White header background */
+    height: 60px;
+    /* Slightly taller header */
+    border-bottom: 1px solid #e5e5e5;
+    /* Subtle border */
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    /* Soft shadow */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header .menu,
+.header .users {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 400;
+    color: #191919;
+}
+
+.header .menu {
+    margin-right: auto;
+    /* Pushes logo and user to center/right */
+}
+
+.header .menu i {
+    margin-right: 8px;
+    font-size: 20px;
+}
+
+.header .logo {
+    flex-grow: 1;
+    /* Allows logo to take available space */
+    text-align: center;
+}
+
+.header .logo img {
+    height: 30px;
+    /* Adjust logo size */
+    vertical-align: middle;
+}
+
+.header .users .user-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+}
+
+.header .users .user-button img {
+    height: 24px;
+    /* User icon size */
+    width: 24px;
+    border-radius: 50%;
+    /* Make it circular if it's a profile pic */
+}
+
+.user-dropdown {
+    position: absolute;
+    top: 55px;
+    /* Position below user icon */
+    right: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    display: none;
+    flex-direction: column;
+    min-width: 150px;
+    z-index: 1001;
+}
+
+.user-dropdown a {
+    padding: 12px 16px;
+    text-decoration: none;
+    color: #191919;
+    display: block;
+    font-size: 15px;
+}
+
+.user-dropdown a:hover {
+    background-color: #f3f3f5;
+}
+
+.user-dropdown.show {
+    display: flex;
+}
+
+/* Sidenav (Menu) Styles */
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 2000;
+    /* Above header */
+    top: 0;
+    left: 0;
+    background-color: #191919;
+    /* Dark background for menu */
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    box-shadow: 2px 0 8px rgba(0, 0, 0, 0.2);
+}
+
+.sidenav a {
+    padding: 15px 25px;
+    text-decoration: none;
+    font-size: 22px;
+    color: #f1f1f1;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover {
+    color: #d4a574;
+    /* Porsche accent color */
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+.active-page {
+    font-weight: 700;
+    color: #d4a574 !important;
+    /* Highlight active page */
+}
+
+/* Main Section Layout */
+.main-section {
+    display: flex;
+    flex-direction: column;
+    /* Stack filters and listings on small screens */
+    gap: 20px;
+    max-width: 1200px;
+    /* Max width for content */
+    margin: 20px auto 0 auto;
+    padding: 0 16px;
+    align-items: stretch;
+}
+
+/* Filter Sidebar Styles */
+.filters {
+    background: #fff;
+    border-radius: 8px;
+    /* Slightly less rounded corners */
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+    /* Softer shadow */
+    padding: 24px 20px;
+    font-size: 15px;
+    width: 100%;
+    order: 2;
+    /* Filters below listings on mobile */
+}
+
+.filters h2 {
+    font-size: 20px;
+    font-weight: 700;
+    margin: 0 0 20px 0;
+    color: #191919;
+}
+
+.filter-group {
+    margin-bottom: 20px;
+}
+
+.filter-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 400;
+    font-size: 14px;
+    color: #555;
+}
+
+.filter-group input[type="text"],
+.filter-group input[type="number"],
+.filter-group input[type="email"],
+.filter-group input[type="password"],
+.filter-group input[type="tel"],
+.filter-group input[type="url"],
+.filter-group select,
+.filter-group textarea {
+    width: 100%;
+    padding: 10px 12px;
+    /* Slightly smaller padding */
+    border: 1px solid #d1d1d1;
+    border-radius: 4px;
+    /* Less rounded inputs */
+    font-size: 15px;
+    margin-top: 4px;
+    margin-bottom: 6px;
+    background: #fafafa;
+    font-family: 'PorscheNext', Arial, sans-serif;
+    box-sizing: border-box;
+    color: #191919;
+}
+
+.filter-group input:focus,
+.filter-group select:focus,
+.filter-group textarea:focus {
+    outline: 2px solid #d4a574;
+    /* Porsche accent for focus */
+    outline-offset: 1px;
+    border-color: #d4a574;
+}
+
+.filter-group input[type="checkbox"] {
+    accent-color: #191919;
+    margin-right: 8px;
+    width: 16px;
+    height: 16px;
+}
+
+.divider {
+    border: none;
+    border-top: 1px solid #e5e5e5;
+    margin: 20px 0;
+}
+
+/* Main Listing Area */
+.main-listing {
+    flex: 1;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+    order: 1;
+    /* Listings above filters on mobile */
+    background-color: #ffffff;
+}
+
+.results-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    border-bottom: 1px solid #e5e5e5;
+    background-color: #ffffff;
+}
+
+.results-header h2 {
+    margin: 0;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.car-count {
+    font-size: 14px;
+    color: #666;
+}
+
+/* Car Card Styles */
+.car-card {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px;
+    border-bottom: 1px solid #e5e5e5;
+    /* Separator for cards */
+    background: #fff;
+}
+
+.car-card:last-child {
+    border-bottom: none;
+}
+
+/* Car Gallery */
+.car-gallery {
+    width: 100%;
+    flex-shrink: 0;
+}
+
+.car-gallery img {
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.07);
+}
+
+.gallery-thumbs {
+    margin-top: 8px;
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+}
+
+.gallery-thumbs img {
+    width: 80px;
+    /* Fixed thumbnail size */
+    height: 60px;
+    object-fit: cover;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: transform 0.2s ease-in-out;
+    border: 2px solid transparent;
+}
+
+.gallery-thumbs img:hover {
+    transform: scale(1.05);
+}
+
+.gallery-thumbs img.active-thumb {
+    border-color: #d4a574;
+}
+
+/* Car Info */
+.car-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.car-title {
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 8px;
+    line-height: 1.3;
+    color: #191919;
+}
+
+.car-details {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 12px;
+    line-height: 1.4;
+}
+
+.car-price {
+    font-size: 20px;
+    font-weight: 700;
+    color: #191919;
+    margin-bottom: 12px;
+}
+
+.car-attributes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    font-size: 13px;
+    margin-bottom: 12px;
+}
+
+.car-attributes span {
+    background: #e5e5e5;
+    /* Lighter background for attributes */
+    border-radius: 4px;
+    padding: 5px 10px;
+    color: #191919;
+    display: inline-block;
+    white-space: nowrap;
+}
+
+.car-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.car-actions button {
+    font-family: 'PorscheNext', Arial, sans-serif;
+    font-size: 15px;
+    padding: 12px 20px;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    font-weight: 700;
+    transition: background 0.2s ease-in-out, color 0.2s ease-in-out;
+    width: 100%;
+    min-height: 44px;
+}
+
+.car-actions .primary {
+    background: #191919;
+    color: #fff;
+}
+
+.car-actions .primary:hover {
+    background: #333;
+}
+
+.car-actions .secondary {
+    background: #fff;
+    color: #191919;
+    border: 1px solid #191919;
+}
+
+.car-actions .secondary:hover {
+    background: #f3f3f5;
+}
+
+.car-actions .secondary.bookmarked {
+    background: #d4a574;
+    /* Porsche accent color for bookmarked */
+    color: #fff;
+    border-color: #d4a574;
+}
+
+.car-actions .secondary.bookmarked:hover {
+    background: #c19660;
+    border-color: #c19660;
+}
+
+/* Sell Form Specific Styles */
+.sell-form {
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+    margin-bottom: 20px;
+}
+
+.sell-form .form-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+    justify-content: flex-end;
+}
+
+.sell-form .form-actions button {
+    width: auto;
+    padding: 10px 20px;
+}
+
+/* Empty State */
+#emptyState {
+    text-align: center;
+    padding: 60px 20px;
+    color: #666;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+    margin-top: 20px;
+}
+
+#emptyState h3 {
+    margin: 0 0 16px 0;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+#emptyState p {
+    margin: 0;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+/* Auth Container (Login/Signup) */
+.auth-container {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.auth-container h2 {
+    font-size: 28px;
+    margin-bottom: 25px;
+    color: #191919;
+}
+
+.auth-container form button {
+    margin-top: 20px;
+    width: 100%;
+    padding: 12px;
+    font-size: 18px;
+}
+
+.auth-container p {
+    margin-top: 20px;
+    font-size: 15px;
+    color: #555;
+}
+
+.auth-container p a {
+    color: #d4a574;
+    text-decoration: none;
+}
+
+.auth-container p a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+
+/* Tablet Styles */
+@media (min-width: 768px) {
+    .main-section {
+        margin: 30px auto 0 auto;
+        padding: 0 24px;
+        gap: 24px;
+    }
+
+    .filters {
+        padding: 28px 22px;
+    }
+
+    .filters h2 {
+        font-size: 22px;
+        margin-bottom: 24px;
+    }
+
+    .car-card {
+        flex-direction: row;
+        /* Side-by-side layout for car cards */
+        gap: 20px;
+        padding: 25px;
+    }
+
+    .car-gallery {
+        width: 280px;
+        /* Fixed width for gallery on tablet */
+    }
+
+    .gallery-thumbs {
+        justify-content: flex-start;
+    }
+
+    .car-title {
+        font-size: 24px;
+    }
+
+    .car-details {
+        font-size: 15px;
+    }
+
+    .car-price {
+        font-size: 22px;
+    }
+
+    .car-attributes {
+        gap: 10px;
+        font-size: 14px;
+    }
+
+    .car-actions {
+        flex-direction: row;
+        gap: 12px;
+    }
+
+    .car-actions button {
+        width: auto;
+        flex: 1;
+    }
+
+    .sell-form .form-actions button {
+        flex: none;
+    }
+}
+
+/* Desktop Styles */
+@media (min-width: 1024px) {
+    .main-section {
+        flex-direction: row;
+        gap: 30px;
+        margin: 40px auto 0 auto;
+        align-items: flex-start;
+    }
+
+    .filters {
+        width: 280px;
+        /* Wider filter sidebar */
+        min-width: 250px;
+        padding: 30px 25px;
+        order: 1;
+    }
+
+    .main-listing {
+        min-width: 600px;
+        order: 2;
+    }
+
+    .car-card {
+        gap: 30px;
+        padding: 30px;
+    }
+
+    .car-gallery {
+        width: 350px;
+    }
+
+    .car-title {
+        font-size: 26px;
+    }
+
+    .car-attributes {
+        gap: 15px;
+    }
+
+    .car-actions {
+        margin-top: 20px;
+    }
+}
+
+/* Large Desktop Styles */
+@media (min-width: 1200px) {
+    .main-section {
+        max-width: 1400px;
+    }
+
+    .filters {
+        width: 320px;
+    }
+
+    .car-gallery {
+        width: 400px;
+    }
+}
+
+/* High DPI Displays */
+@media (-webkit-min-device-pixel-ratio: 2),
+(min-resolution: 192dpi) {
+
+    .car-gallery img,
+    .gallery-thumbs img {
+        image-rendering: -webkit-optimize-contrast;
+        image-rendering: crisp-edges;
+    }
+}
+
+/* Print Styles */
+@media print {
+
+    .header,
+    .filter-toggle,
+    .filters,
+    .car-actions,
+    .sell-form .form-actions,
+    .auth-container form button,
+    .auth-container p {
+        display: none;
+    }
+
+    .main-section {
+        flex-direction: column;
+        margin: 0;
+        padding: 0;
+        gap: 15px;
+    }
+
+    .main-listing,
+    .car-card,
+    .sell-form,
+    .auth-container {
+        box-shadow: none;
+        border: 1px solid #ccc;
+        padding: 15px;
+    }
+
+    body {
+        background: #fff;
+    }
+}
+
+
+
+
+@media (prefers-color-scheme: dark) {
+
+    html,
+    body {
+
+        color: #e0e0e0;
+    }
+
+    .header,
+    .filters,
+    .main-listing,
+    .car-card,
+    .sell-form,
+    .auth-container,
+    .user-dropdown {
+        color: #e0e0e0;
+
+    }
+
+
+
+    .filter-group label,
+    .car-details,
+    .car-count,
+    #emptyState p,
+    .auth-container p {
+        color: #bbb;
+    }
+
+    .filter-group input,
+    .filter-group select,
+    .filter-group textarea {
+        background: #2a2a2a;
+        border-color: #444;
+        color: #e0e0e0;
+    }
+
+    .filter-group input:focus,
+    .filter-group select:focus,
+    .filter-group textarea:focus {
+        outline-color: #d4a574;
+        border-color: #d4a574;
+    }
+
+    .car-attributes span {
+        background: #2a2a2a;
+        color: #e0e0e0;
+    }
+
+    .car-actions .primary {
+        background: #d4a574;
+    }
+
+    .car-actions .primary:hover {
+        background: #c19660;
+    }
+
+    .car-actions .secondary {
+        color: #d4a574;
+        border-color: #d4a574;
+    }
+
+    .car-actions .secondary:hover {
+        background: #2a2a2a;
+    }
+
+    .car-actions .secondary.bookmarked {
+        background: #c19660;
+        border-color: #c19660;
+    }
+
+    .auth-container p a {
+        color: #d4a574;
+    }
+
+    .sidenav {
+        background-color: #121212;
+    }
+
+    .sidenav a {
+        color: #e0e0e0;
+    }
+
+    .sidenav a:hover {
+        color: #d4a574;
+    }
+
+    .active-page {
+        color: #d4a574 !important;
+    }
+}
