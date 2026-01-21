@@ -1,0 +1,373 @@
+<html>
+
+<head>
+    <title>Porsche Taycan</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="Taycan.css" type="text/css">
+</head>
+
+<body>
+    <script src="/javascript/cars.js"></script>
+    <script src="/javascript/ps.js"></script>
+
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <div onclick="Open718()" class="car-container">
+            <div class="car-title">
+                718
+            </div>
+            <img alt="Image of a 718 car model" height="300"
+                src="https://images-porsche.imgix.net/-/media/4D76222C0FFD456B9F8F93CC638725CD_269E9C4B98FF4C54B6DE2F8741B844F0_CM24N3CIX0006-01-718-cayman-s-side?w=2560&h=697&q=45&crop=faces%2Centropy%2Cedges&auto=format"
+                width="600" />
+            <div id="ft" class="fuel-type">
+                Gasoline
+            </div>
+        </div>
+        <div onclick="Open911()" class="car-container">
+            <div class="car-title">
+                911
+            </div>
+            <img alt="Image of a 911 car model" height="300"
+                src="https://images-porsche.imgix.net/-/media/243EAB8F810C4DE395A5DD4C0D154B9F_2FA3EAFE31044EE5B0485A499CEBD557_CZ26W03IX0010-911-carrera-s-side?w=2560&h=697&q=45&crop=faces%2Centropy%2Cedges&auto=format"
+                width="600" />
+            <div id="ft" class="fuel-type">
+                Gasoline
+            </div>
+        </div>
+        <div onclick="OpenTC()" class="car-container">
+            <div class="car-title">
+                Taycan
+            </div>
+            <img alt="Image of a Taycan car model" height="300"
+                src="https://images-porsche.imgix.net/-/media/92AF17A38D324AB788D0362DC53C8C52_4B915A284B3C4BEDB1E6EF0FEA2065A8_taycan-4-side?w=2560&h=697&q=45&crop=faces%2Centropy%2Cedges&auto=format"
+                width="600" />
+            <div id="ft" class="fuel-type">
+                Electric
+            </div>
+        </div>
+        <div onclick="OpenPNMR()" class="car-container">
+            <div class="car-title">
+                Panamera
+            </div>
+            <img alt="Image of a Panamera car model" height="300"
+                src="https://images-porsche.imgix.net/-/media/C7ADC76FD1A84CEAAE7024CF325F2F2D_2E34FF94FDAE4D36B91A523A1431136A_panamera-4-e-hybrid-model-intro?w=2560&h=697&q=45&crop=faces%2Centropy%2Cedges&auto=format"
+                width="600" />
+            <div id="ft" class="fuel-type">
+                Hybrid / Gasoline
+            </div>
+        </div>
+    </div>
+
+    <div id="main">
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <div class="container-col-lg-12">
+            <div id="sidenav" class="header">
+                <div onclick="openNav()" class="menu">
+                    <i class="fas fa-bars"></i> Menu
+                </div>
+                <div onclick="openMenu()" class="logo">
+                    <img src="/image/logio23.png">
+                </div>
+
+            </div>
+            <div class="car-image">
+                <img class="bgi"
+                    src="https://images-porsche.imgix.net/-/media/67A28F79D6F042AD949D9D8C524342F0_FB2D44399A62412EBE58B0ECB6DDE447_A-POR-27-240362-A_TAYCAN_OVERFEEL_Edit4_2560x570?w=2560&q=85&auto=format 1x,https://images-porsche.imgix.net/-/media/67A28F79D6F042AD949D9D8C524342F0_FB2D44399A62412EBE58B0ECB6DDE447_A-POR-27-240362-A_TAYCAN_OVERFEEL_Edit4_2560x570?w=2560&q=45&dpr=2&auto=format 2x">
+                <img class="sgn"
+                    src="https://cdn.ui.porsche.com/porsche-design-system/model-signatures/taycan.df444c6.svg">
+            </div>
+        </div>
+        <div class="car-model">
+            <img
+                src="https://images-porsche.imgix.net/-/media/261EF9F86B2B4F45AC57EA8D26C3B081_A4BAE2D2A1C74C5E87E3AB8A5B8F5124_TA24Q3BIX0010-taycan-side?w=2560&h=697&q=85&crop=faces%2Centropy%2Cedges&auto=format">
+        </div>
+        <div class="model-info">
+            <h1>Porsche Taycan</h1>
+            <div class="badge">Electro</div>
+            <div class="price">from VND 4,620,000,000.00 </div>
+        </div>
+        <div class="buttons">
+            <button onclick="openNav()" class="change-model">Change model</button>
+
+        </div>
+        <div class="section-specs text-center">
+            <div class="row align-items-center">
+                <div class="col-md-5 text-md-left mb-4 mb-md-0">
+                    <div class="specs">
+                        <div>
+                            <span>
+                                4.8
+                            </span>
+                            <small>
+                                s
+                            </small>
+                            <p>
+                                Acceleration 0 - 100 km/h with Launch Control
+                            </p>
+                        </div>
+                        <div>
+                            <span>
+                                300
+                            </span>
+                            kW /
+                            <span>
+                                408
+                            </span>
+                            PS
+                            <p>
+                                Power (kW)/Power (PS)
+                            </p>
+                        </div>
+                        <div>
+                            <span>
+                                230
+                            </span>
+                            km/h
+                            <p>
+                                Top speed
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-7">
+                    <div class="front-car-image   X`">
+                        <img alt="Blue sports car front view" class="img-fluid"
+                            src="https://images-porsche.imgix.net/-/media/8BEAA9C5AB93489C8F2415AE4C9329F1_E6EBE63671454993B0EE5F266B68893B_TA24Q3BIX0011-taycan-front?w=598&q=85&auto=format" />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-sm styles">
+            <div class="container first col-md-12">
+                <img
+                    src="https://images-porsche.imgix.net/-/media/7F89EE87A9BC40BBB14FCEF26C7D2158_5D76CFBEE55B45DD99DD00677E3D233B_TA24Q3EOX0008-taycan-turbo-s-front?w=2560&h=1440&q=85&crop=faces%2Centropy%2Cedges&auto=format">
+            </div>
+            <div class="textNside">
+                <div class="text col-md-5 text-md-left mb-4 mb-md-0">
+                    <h1>Overfeel.</h1>
+                    <p>The overwhelming feeling of sitting in an amazing electric sports car: the new Taycan makes
+                        electricity even more electrifying. Performance even more impressive. And the extraordinary even
+                        more outstanding.</p>
+                </div>
+                <div class="side col-md-7 col-md-right">
+                    <img
+                        src="https://images-porsche.imgix.net/-/media/BED6ED06CA64470497CA24677A85423D_0BC6E08BB28F4066BFB806056A902024_TA24Q3EOX0007-taycan-turbo-s-with-model?w=900&q=85&crop=faces%2Centropy%2Cedges&auto=format">
+                </div>
+            </div>
+            <div class="container last col-md-12">
+                <img
+                    src="https://images-porsche.imgix.net/-/media/A616C1590C2F4A2186D818C713C62FF7_6E4DDE8298BC4ED6A8EEFE5CA0C64085_TA24Q3EOX0006-01-taycan-turbo-s-front?w=900&q=85&crop=faces%2Centropy%2Cedges&auto=format">
+            </div>
+
+        </div>
+        <div class="container-fluid container-slider-1">
+            <div class="background-image-slider">
+                <img
+                    src="https://images-porsche.imgix.net/-/media/BA0053F1F0204B38BCD792602168AB8C_77F61F59AF994EBEA03CF6144D6790C7_TA24Q3EOX0003-taycan-turbo-s-driving-sideshot?fp-x=0.5&fp-y=0.5&w=1759&ar=21%3A9&q=85&crop=focalpoint&auto=format">
+                <div class="gradient">
+                </div>
+            </div>
+            <div class="slider-1">
+                <h1>Porsche E-Performance.</h1>
+                <input type="radio" name="position" checked />
+                <input type="radio" name="position" />
+                <input type="radio" name="position" />
+                <div id="carousel">
+                    <div class="item">
+                        <div class="container-slider">
+                            <img src="https://images-porsche.imgix.net/-/media/4A47BDF453C74D32871F4BF0AC3101F2_83EC3B2024AB48FF95B9065FC2135910_taycan-turbo-s-rear-axle?fp-x=0.5&fp-y=0.5&w=975&ar=27%3A11&q=85&crop=focalpoint&auto=format"
+                                alt="3.0-litre flat-6 engine" class="engine-image">
+                            <div class="row slider-text">
+                                <div class="title-item col-md-4">
+                                    <h2 class="fw-bold"></h2>
+                                    <h2 class="fw-bold fw-bold-2">Rear-axle steering.</h2>
+                                </div>
+                                <div class="col-md-8">
+                                    <p class="text-muted">
+                                        The optional rear-axle steering, which is standard on the Taycan Turbo S,
+                                        ensures more dynamic steering behaviour while cornering and makes manoeuvring
+                                        and parking in tight spaces much easier.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="container-slider">
+                            <img class="slider-img-2"
+                                src="https://images-porsche.imgix.net/-/media/A51B5DF6A4B345FC961E36121BDD5BA3_B17AE29D18A24F629BFE5AEE058BBCC6_taycan-800-v-technology?fp-x=0.5&fp-y=0.5&w=792&ar=125%3A66&q=85&crop=focalpoint&auto=format"
+                                alt="3.0-litre flat-6 engine" class="engine-image">
+                            <div class="row slider-text-2">
+                                <div class="title-item col-md-4">
+                                    <h2 class="fw-bold">800V</h2>
+                                    <h2 class="fw-bold fw-bold-2">technology.</h2>
+                                </div>
+                                <div class="col-md-8">
+                                    <p class="text-muted">
+                                        For fast charging with up to 320 kW charging power and outstanding performance,
+                                        the batteries are based on 800-V technology. The technology also enables smaller
+                                        cable cross-sections, for reduced vehicle weight.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="container-slider row">
+                            <div class="col-md-5">
+                                <img class="sd1img"
+                                    src="https://images-porsche.imgix.net/-/media/DD972D1672C24A3AADAF2219BF5DF4D4_7B5C00D59CD049ED9B2D046E72DC3460_taycan-turbo-s-air-suspension?fp-x=0.5&fp-y=0.5&w=317&ar=5%3A11&q=85&crop=focalpoint&auto=format"
+                                    alt="3.0-litre flat-6 engine" class="engine-image">
+                            </div>
+                            <div class="col-md-7 slider-text">
+                                <h2 class="fw-bold-3">PDK.</h2>
+                                <p class="text-muted-1">
+                                    The 7-speed PDK with manual and automatic modes allows for extremely fast gear
+                                    changes without interruption in traction. In manual mode, the direction of shifting
+                                    is the same as in race cars – upshift to the rear, downshift to the front.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-highlights container-fluid">
+            <h1>Highlights</h1>
+            <div class="highlight-slider">
+                <input type="radio" name="position" checked />
+                <input type="radio" name="position" />
+                <input type="radio" name="position" />
+                <input type="radio" name="position" />
+                <input type="radio" name="position" />
+                <div id="carousel">
+                    <div class="item item-1">
+                        <div class="text-content">
+                            <h2>Porsche dynamics.</h2>
+                            <p>From the racetrack to the road: Racetrack mode and Push-to-Pass. The optional Porsche
+                                Active Ride takes driving dynamics and agility to a new level on all-wheel drive models.
+                            </p>
+                        </div>
+                        <div class="container-slider">
+                            <img
+                                src="https://images-porsche.imgix.net/-/media/F6F0CA07F2CC4548B0820BF01A75D01B_C9B6458259D74559A5E7B766A0971AC0_TA24Q3EOX0003-taycan-turbo-s-driving?w=650&q=85&auto=format 1x,https://images-porsche.imgix.net/-/media/F6F0CA07F2CC4548B0820BF01A75D01B_C9B6458259D74559A5E7B766A0971AC0_TA24Q3EOX0003-taycan-turbo-s-driving?w=650&q=45&dpr=2&auto=format 2x">
+                        </div>
+                    </div>
+                    <div class="item item-2">
+                        <div class="text-content">
+                            <h2>Headlights</h2>
+                            <p>Recognisable from afar, day or night: the characteristic Porsche 4-point design on the
+                                camera-controlled matrix LED headlights and the HD matrix LED main headlights that come
+                                as standard on Turbo models.</p>
+                        </div>
+                        <div class="container-slider">
+                            <img
+                                src="https://images-porsche.imgix.net/-/media/9CF47C7534AE4A628329E6F950D5D653_79C9131E582643E4A368971CF1681927_TA24Q3EID0002-taycan-turbo-s-headlight?w=999&q=85&auto=format">
+                        </div>
+                    </div>
+                    <div class="item item-3">
+                        <div class="text-content">
+                            <h2>Designs.</h2>
+                            <p>With pure proportions, the all-electric Taycan clearly emphasises its even greater
+                                sportiness.</p>
+                        </div>
+                        <div class="container-slider">
+                            <img
+                                src="https://images-porsche.imgix.net/-/media/61973001E9734AE493E4652F540C0CF9_87F36078723A45928AF1697421153041_TA24Q3EIX0002-taycan-turbo-s-front?w=383&q=85&auto=format 1x,https://images-porsche.imgix.net/-/media/61973001E9734AE493E4652F540C0CF9_87F36078723A45928AF1697421153041_TA24Q3EIX0002-taycan-turbo-s-front?w=383&q=45&dpr=2&auto=format 2x">
+                        </div>
+                    </div>
+                    <div class="item item-4">
+                        <div class="text-content">
+                            <h2>E-Performance.</h2>
+                            <p>The battery's optimised cell chemistry achieves goals that have always made the
+                                difference in motor sports: long range and short downtimes.</p>
+                        </div>
+                        <div class="container-slider">
+                            <img
+                                src="https://images-porsche.imgix.net/-/media/CE2BD0A699E947388CF9B1650A7B88AE_BBF043074A094B41919A33ABA99BD924_TA24Q3EIX0004-taycan-turbo-s-rear?w=650&q=85&auto=format 1x,https://images-porsche.imgix.net/-/media/CE2BD0A699E947388CF9B1650A7B88AE_BBF043074A094B41919A33ABA99BD924_TA24Q3EIX0004-taycan-turbo-s-rear?w=650&q=45&dpr=2&auto=format 2x">
+                        </div>
+                    </div>
+                    <div class="item item-5">
+                        <div class="text-content">
+                            <h2>Interior concept.</h2>
+                            <p>Intuitive handling, performance-oriented ergonomics and a clean design. The interior of
+                                the 718 models is also fully geared towards sporty performance.</p>
+                        </div>
+                        <div class="container-slider">
+                            <img
+                                src="https://images-porsche.imgix.net/-/media/26C9F72CE4C64763B3C7DCBE8E2BB095_78DC3FC34F2A48EC855CCE443CB3D117_CM24N3BID0001-02-718-cayman-interior?w=410&q=85&auto=format 1x,https://images-porsche.imgix.net/-/media/26C9F72CE4C64763B3C7DCBE8E2BB095_78DC3FC34F2A48EC855CCE443CB3D117_CM24N3BID0001-02-718-cayman-interior?w=410&q=45&dpr=2&auto=format 2x">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+                <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+
+        <h1 style="font-weight: 5000">See in 3D.</h1>
+        <model-viewer
+            src="/image/porshe_taycan.glb"
+            alt="3D Model"
+            camera-controls
+            auto-rotate
+            shadow-intensity="2"
+            environment-image="neutral"
+            camera-orbit="0deg 75deg 5m"
+            field-of-view="60deg"
+            exposure="1.5"
+            orbit-sensitivity = "0.3"
+            min-camera-orbit="auto 0deg auto"
+            max-camera-orbit="auto 90deg auto"
+            style="width: 100%; height: 500px; background-color:  whitesmoke;">
+
+        </model-viewer>
+        <div class="section-footer">
+            <h4>© 2025 Porsche Cars North America, Inc.
+                Legal notice.
+
+                Privacy notice.
+
+                California Privacy.
+
+                Accessibility Statement.
+
+                NMLS #3164
+
+                Open Source Software Notice.
+
+                Do Not Sell or Share My Personal Information.
+
+                Whistleblower System.
+
+                Emergency Responders.
+
+                In-Use Verification Program.
+
+
+                Certification of Compliance.
+            </h4>
+            <img src="/image/pngwing.com.png">
+        </div>
+    </div>
+</body>
+</div>
+</div>
+</body>
+
+</html>
